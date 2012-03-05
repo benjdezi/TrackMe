@@ -41,7 +41,7 @@
 	self.locationManager.delegate = self;
 	self.locationManager.distanceFilter = MIN_DIST_CHANGE;
 	self.locationManager.desiredAccuracy = DEFAULT_PRECISION;
-		
+	
     return YES;
 }
 
@@ -131,6 +131,24 @@
 }
 
 
+-(void)updateMap:(CLLocation*)location {
+	
+	double miles = 12.0;
+	double scalingFactor = ABS(cos(2 * M_PI * location.coordinate.latitude / 360.0));
+	
+	MKCoordinateSpan span;
+	span.latitudeDelta = miles / 69.0;
+	span.longitudeDelta = miles / (scalingFactor * 69.0);
+	
+	MKCoordinateRegion region;
+	region.span = span;
+	region.center = location.coordinate;
+	
+	[self.viewController.mapView setRegion:region];
+	self.viewController.mapView.showsUserLocation = YES;
+	
+}
+
 #pragma mark -
 #pragma mark CLLocationManager methods
 
@@ -154,6 +172,7 @@
 		self.numPoints++;
 		
 		[self.viewController updateRunDisplay];
+		[self updateMap:newLocation];
 	}
 	
 }

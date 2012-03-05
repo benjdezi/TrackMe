@@ -18,6 +18,8 @@
 @synthesize curSpeedLabel;
 @synthesize startButton;
 @synthesize resetButton;
+@synthesize tabBar;
+@synthesize mapView;
 
 
 #pragma mark -
@@ -53,7 +55,7 @@
 	[self.runTimeLabel setText:DEFAULT_TIMER_TEXT];
 	[self.distanceLabel setText:@"0 m"];
 	[self.avgSpeedLabel setText:@"-"];
-	[self.curSpeedLabel setText:[NSString stringWithFormat:@"%.1f", 1.45]];
+	[self.curSpeedLabel setText:@"-"];
 	[self setStartButtonTitle:START_BUTTON_TEXT];
 	self.started = NO;[self setStartButtonTitle:START_BUTTON_TEXT];
 }
@@ -133,6 +135,8 @@
 	[curSpeedLabel release];
 	[startButton release];
 	[resetButton release];
+	[tabBar release];
+	[mapView release];
     [super dealloc];
 }
 

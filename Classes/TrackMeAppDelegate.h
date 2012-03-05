@@ -39,6 +39,7 @@
 -(void)start;
 -(void)stop;
 -(void)updateTimer;
+-(void)updateMap:(CLLocation*)location;
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) IBOutlet TrackMeViewController *viewController;

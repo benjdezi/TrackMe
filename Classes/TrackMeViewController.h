@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
 #import "TrackMeAppDelegate.h"
 
 #define START_BUTTON_TEXT	@"Start"
@@ -26,11 +27,14 @@
 	UILabel* curSpeedLabel;
 	UIButton* startButton;
 	UIButton* resetButton;
+	UITabBar* tabBar;
+	MKMapView* mapView;
 	
 }
 
 -(IBAction)startOrStop;
 -(IBAction)reset;
+
 -(void)setStartButtonTitle:(NSString*)text;
 -(void)updateRunDisplay;
 
@@ -44,6 +48,8 @@
 @property (nonatomic, retain) IBOutlet UILabel* curSpeedLabel;
 @property (nonatomic, retain) IBOutlet UIButton* startButton;
 @property (nonatomic, retain) IBOutlet UIButton* resetButton;
+@property (nonatomic, retain) IBOutlet UITabBar* tabBar;
+@property (nonatomic, retain) IBOutlet MKMapView* mapView;
 
 @end
 
