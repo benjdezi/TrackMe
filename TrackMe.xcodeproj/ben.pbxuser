@@ -1,0 +1,1540 @@
+// !$*UTF8*$!
+{
+	1D3623240D0F684500981E51 /* TrackMeAppDelegate.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1099, 793}}";
+			sepNavSelRange = "{326, 18}";
+			sepNavVisRange = "{40, 767}";
+			sepNavWindowFrame = "{{15, 69}, {1220, 804}}";
+		};
+	};
+	1D3623250D0F684500981E51 /* TrackMeAppDelegate.m */ = {
+		uiCtxt = {
+			sepNavFolds = "{\n    c =     (\n                {\n            r = \"{688, 475}\";\n            s = 0;\n        },\n                {\n            r = \"{1233, 446}\";\n            s = 0;\n        },\n                {\n            r = \"{1751, 351}\";\n            s = 0;\n        },\n                {\n            r = \"{2175, 165}\";\n            s = 0;\n        },\n                {\n            r = \"{2409, 205}\";\n            s = 0;\n        },\n                {\n            r = \"{2681, 118}\";\n            s = 0;\n        },\n                {\n            r = \"{3477, 531}\";\n            s = 0;\n        },\n                {\n            r = \"{4797, 541}\";\n            s = 0;\n        }\n    );\n    r = \"{0, 5734}\";\n    s = 0;\n}";
+			sepNavIntBoundsRect = "{{0, 0}, {1099, 1742}}";
+			sepNavSelRange = "{2372, 0}";
+			sepNavVisRange = "{0, 837}";
+			sepNavWindowFrame = "{{15, 69}, {1220, 804}}";
+		};
+	};
+	1D6058900D05DD3D006BFB54 /* TrackMe */ = {
+		activeExec = 0;
+		executables = (
+			B5AE700B150430BF00981FA7 /* TrackMe */,
+		);
+	};
+	28D7ACF60DDB3853001CB0EB /* TrackMeViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1099, 624}}";
+			sepNavSelRange = "{648, 24}";
+			sepNavVisRange = "{137, 874}";
+		};
+	};
+	28D7ACF70DDB3853001CB0EB /* TrackMeViewController.m */ = {
+		uiCtxt = {
+			sepNavFolds = "{\n    c =     (\n                {\n            r = \"{2599, 155}\";\n            s = 0;\n        },\n                {\n            r = \"{2781, 83}\";\n            s = 0;\n        },\n                {\n            r = \"{2885, 173}\";\n            s = 0;\n        }\n    );\n    r = \"{0, 3066}\";\n    s = 0;\n}";
+			sepNavIntBoundsRect = "{{0, 0}, {1099, 1599}}";
+			sepNavSelRange = "{2101, 0}";
+			sepNavVisRange = "{1647, 915}";
+			sepNavWindowFrame = "{{15, 69}, {1220, 804}}";
+		};
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = B5AE700B150430BF00981FA7 /* TrackMe */;
+		activeTarget = 1D6058900D05DD3D006BFB54 /* TrackMe */;
+		breakpoints = (
+		);
+		codeSenseManager = B5AE7010150430DE00981FA7 /* Code sense */;
+		executables = (
+			B5AE700B150430BF00981FA7 /* TrackMe */,
+		);
+		perUserDictionary = {
+			"PBXConfiguration.PBXBreakpointsDataSource.v1:1CA1AED706398EBD00589147" = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXBreakpointsDataSource_BreakpointID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					20,
+					198,
+					20,
+					99,
+					99,
+					29,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXBreakpointsDataSource_ActionID,
+					PBXBreakpointsDataSource_TypeID,
+					PBXBreakpointsDataSource_BreakpointID,
+					PBXBreakpointsDataSource_UseID,
+					PBXBreakpointsDataSource_LocationID,
+					PBXBreakpointsDataSource_ConditionID,
+					PBXBreakpointsDataSource_IgnoreCountID,
+					PBXBreakpointsDataSource_ContinueID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					921,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 352617833;
+			PBXWorkspaceStateSaveDate = 352617833;
+		};
+		perUserProjectItems = {
+			B5399EE61504866A00B9E596 /* XCBuildMessageTextBookmark */ = B5399EE61504866A00B9E596 /* XCBuildMessageTextBookmark */;
+			B5399EE71504866A00B9E596 /* PBXTextBookmark */ = B5399EE71504866A00B9E596 /* PBXTextBookmark */;
+			B5399EEC1504869F00B9E596 /* PBXTextBookmark */ = B5399EEC1504869F00B9E596 /* PBXTextBookmark */;
+			B5399EED1504869F00B9E596 /* XCBuildMessageTextBookmark */ = B5399EED1504869F00B9E596 /* XCBuildMessageTextBookmark */;
+			B5399EEE1504869F00B9E596 /* PBXTextBookmark */ = B5399EEE1504869F00B9E596 /* PBXTextBookmark */;
+			B5399EF5150486CB00B9E596 /* PBXTextBookmark */ = B5399EF5150486CB00B9E596 /* PBXTextBookmark */;
+			B5399EF6150486CB00B9E596 /* PBXTextBookmark */ = B5399EF6150486CB00B9E596 /* PBXTextBookmark */;
+			B5399EF7150486CB00B9E596 /* PBXTextBookmark */ = B5399EF7150486CB00B9E596 /* PBXTextBookmark */;
+			B5399EF8150486CB00B9E596 /* PBXTextBookmark */ = B5399EF8150486CB00B9E596 /* PBXTextBookmark */;
+			B5399EF9150486CB00B9E596 /* PBXTextBookmark */ = B5399EF9150486CB00B9E596 /* PBXTextBookmark */;
+			B5399F09150487EC00B9E596 /* PBXTextBookmark */ = B5399F09150487EC00B9E596 /* PBXTextBookmark */;
+			B5399F101504882F00B9E596 /* PBXTextBookmark */ = B5399F101504882F00B9E596 /* PBXTextBookmark */;
+			B5399F13150488D900B9E596 /* PBXTextBookmark */ = B5399F13150488D900B9E596 /* PBXTextBookmark */;
+			B5399F18150488E400B9E596 /* PBXTextBookmark */ = B5399F18150488E400B9E596 /* PBXTextBookmark */;
+			B5399F191504892C00B9E596 /* PBXTextBookmark */ = B5399F191504892C00B9E596 /* PBXTextBookmark */;
+			B5399F1E1504894800B9E596 /* PBXTextBookmark */ = B5399F1E1504894800B9E596 /* PBXTextBookmark */;
+			B5399F231504897D00B9E596 /* PBXTextBookmark */ = B5399F231504897D00B9E596 /* PBXTextBookmark */;
+			B5399F2815048EFC00B9E596 /* PBXTextBookmark */ = B5399F2815048EFC00B9E596 /* PBXTextBookmark */;
+			B5399F2915048EFC00B9E596 /* PBXTextBookmark */ = B5399F2915048EFC00B9E596 /* PBXTextBookmark */;
+			B5399F2A15048EFC00B9E596 /* PBXTextBookmark */ = B5399F2A15048EFC00B9E596 /* PBXTextBookmark */;
+			B5399F2F1504913600B9E596 /* PBXTextBookmark */ = B5399F2F1504913600B9E596 /* PBXTextBookmark */;
+			B5399F301504913600B9E596 /* PBXTextBookmark */ = B5399F301504913600B9E596 /* PBXTextBookmark */;
+			B5399F311504913600B9E596 /* PBXTextBookmark */ = B5399F311504913600B9E596 /* PBXTextBookmark */;
+			B5399F321504913600B9E596 /* PBXTextBookmark */ = B5399F321504913600B9E596 /* PBXTextBookmark */;
+			B5399F37150492B600B9E596 /* PBXTextBookmark */ = B5399F37150492B600B9E596 /* PBXTextBookmark */;
+			B5399F3A1504940F00B9E596 /* PBXTextBookmark */ = B5399F3A1504940F00B9E596 /* PBXTextBookmark */;
+			B5399F3B1504940F00B9E596 /* PBXTextBookmark */ = B5399F3B1504940F00B9E596 /* PBXTextBookmark */;
+			B5399F3C1504940F00B9E596 /* XCBuildMessageTextBookmark */ = B5399F3C1504940F00B9E596 /* XCBuildMessageTextBookmark */;
+			B5399F3D1504940F00B9E596 /* PBXTextBookmark */ = B5399F3D1504940F00B9E596 /* PBXTextBookmark */;
+			B5399F421504944000B9E596 /* PBXTextBookmark */ = B5399F421504944000B9E596 /* PBXTextBookmark */;
+			B5399F431504944000B9E596 /* XCBuildMessageTextBookmark */ = B5399F431504944000B9E596 /* XCBuildMessageTextBookmark */;
+			B5399F441504944000B9E596 /* PBXTextBookmark */ = B5399F441504944000B9E596 /* PBXTextBookmark */;
+			B5399F491504945800B9E596 /* PBXTextBookmark */ = B5399F491504945800B9E596 /* PBXTextBookmark */;
+			B5399F501504972000B9E596 /* PBXTextBookmark */ = B5399F501504972000B9E596 /* PBXTextBookmark */;
+			B5399F511504972000B9E596 /* PBXTextBookmark */ = B5399F511504972000B9E596 /* PBXTextBookmark */;
+			B5399F521504972000B9E596 /* PBXTextBookmark */ = B5399F521504972000B9E596 /* PBXTextBookmark */;
+			B5399F571504973400B9E596 /* PBXTextBookmark */ = B5399F571504973400B9E596 /* PBXTextBookmark */;
+			B5399F581504974F00B9E596 /* PBXTextBookmark */ = B5399F581504974F00B9E596 /* PBXTextBookmark */;
+			B5399F5D1504977400B9E596 /* PBXTextBookmark */ = B5399F5D1504977400B9E596 /* PBXTextBookmark */;
+			B5399F5E1504979800B9E596 /* PBXTextBookmark */ = B5399F5E1504979800B9E596 /* PBXTextBookmark */;
+			B5399F6915049B5900B9E596 /* PBXTextBookmark */ = B5399F6915049B5900B9E596 /* PBXTextBookmark */;
+			B5399F6A15049B5900B9E596 /* PBXTextBookmark */ = B5399F6A15049B5900B9E596 /* PBXTextBookmark */;
+			B5399F6B15049B5900B9E596 /* PBXTextBookmark */ = B5399F6B15049B5900B9E596 /* PBXTextBookmark */;
+			B5399F7315049CFB00B9E596 /* PBXTextBookmark */ = B5399F7315049CFB00B9E596 /* PBXTextBookmark */;
+			B5399F7415049CFB00B9E596 /* XCBuildMessageTextBookmark */ = B5399F7415049CFB00B9E596 /* XCBuildMessageTextBookmark */;
+			B5399F7515049CFB00B9E596 /* PBXTextBookmark */ = B5399F7515049CFB00B9E596 /* PBXTextBookmark */;
+			B5399F7E15049D4000B9E596 /* PBXTextBookmark */ = B5399F7E15049D4000B9E596 /* PBXTextBookmark */;
+			B5399F7F15049D4000B9E596 /* PBXTextBookmark */ = B5399F7F15049D4000B9E596 /* PBXTextBookmark */;
+			B5399F8015049D4000B9E596 /* PBXTextBookmark */ = B5399F8015049D4000B9E596 /* PBXTextBookmark */;
+			B5399F8115049D4000B9E596 /* PBXTextBookmark */ = B5399F8115049D4000B9E596 /* PBXTextBookmark */;
+			B5399F8215049D4000B9E596 /* PBXTextBookmark */ = B5399F8215049D4000B9E596 /* PBXTextBookmark */;
+			B5399F8F1504A16400B9E596 /* PBXTextBookmark */ = B5399F8F1504A16400B9E596 /* PBXTextBookmark */;
+			B5399F901504A16400B9E596 /* XCBuildMessageTextBookmark */ = B5399F901504A16400B9E596 /* XCBuildMessageTextBookmark */;
+			B5399F911504A16400B9E596 /* PBXTextBookmark */ = B5399F911504A16400B9E596 /* PBXTextBookmark */;
+			B5399F961504A17900B9E596 /* PBXTextBookmark */ = B5399F961504A17900B9E596 /* PBXTextBookmark */;
+			B5399F971504A17900B9E596 /* PBXTextBookmark */ = B5399F971504A17900B9E596 /* PBXTextBookmark */;
+			B5399F981504A17900B9E596 /* PBXTextBookmark */ = B5399F981504A17900B9E596 /* PBXTextBookmark */;
+			B5399F991504A17900B9E596 /* PBXTextBookmark */ = B5399F991504A17900B9E596 /* PBXTextBookmark */;
+			B5399F9A1504A17900B9E596 /* PBXTextBookmark */ = B5399F9A1504A17900B9E596 /* PBXTextBookmark */;
+			B5399FA51504A29A00B9E596 /* PBXTextBookmark */ = B5399FA51504A29A00B9E596 /* PBXTextBookmark */;
+			B5399FA61504A29A00B9E596 /* PBXTextBookmark */ = B5399FA61504A29A00B9E596 /* PBXTextBookmark */;
+			B5399FA71504A29A00B9E596 /* PBXTextBookmark */ = B5399FA71504A29A00B9E596 /* PBXTextBookmark */;
+			B5399FA81504A29A00B9E596 /* PBXTextBookmark */ = B5399FA81504A29A00B9E596 /* PBXTextBookmark */;
+			B5399FA91504A29A00B9E596 /* PBXTextBookmark */ = B5399FA91504A29A00B9E596 /* PBXTextBookmark */;
+			B5399FAE1504A31400B9E596 /* PBXTextBookmark */ = B5399FAE1504A31400B9E596 /* PBXTextBookmark */;
+			B5399FB31504A3AA00B9E596 /* PBXTextBookmark */ = B5399FB31504A3AA00B9E596 /* PBXTextBookmark */;
+			B5399FB41504A3AA00B9E596 /* PBXTextBookmark */ = B5399FB41504A3AA00B9E596 /* PBXTextBookmark */;
+			B5399FB51504A3AA00B9E596 /* PBXTextBookmark */ = B5399FB51504A3AA00B9E596 /* PBXTextBookmark */;
+			B5399FBB1504A4C500B9E596 /* PBXTextBookmark */ = B5399FBB1504A4C500B9E596 /* PBXTextBookmark */;
+			B5399FBC1504A4C500B9E596 /* XCBuildMessageTextBookmark */ = B5399FBC1504A4C500B9E596 /* XCBuildMessageTextBookmark */;
+			B5399FBD1504A4C500B9E596 /* PBXTextBookmark */ = B5399FBD1504A4C500B9E596 /* PBXTextBookmark */;
+			B5399FC41504A4FD00B9E596 /* PBXTextBookmark */ = B5399FC41504A4FD00B9E596 /* PBXTextBookmark */;
+			B5399FC51504A4FD00B9E596 /* PBXTextBookmark */ = B5399FC51504A4FD00B9E596 /* PBXTextBookmark */;
+			B5399FC61504A4FD00B9E596 /* PBXTextBookmark */ = B5399FC61504A4FD00B9E596 /* PBXTextBookmark */;
+			B5399FC71504A4FD00B9E596 /* PBXTextBookmark */ = B5399FC71504A4FD00B9E596 /* PBXTextBookmark */;
+			B5399FC81504A4FD00B9E596 /* PBXTextBookmark */ = B5399FC81504A4FD00B9E596 /* PBXTextBookmark */;
+			B5399FCD1504A56F00B9E596 /* PBXTextBookmark */ = B5399FCD1504A56F00B9E596 /* PBXTextBookmark */;
+			B5399FCE1504A56F00B9E596 /* PBXTextBookmark */ = B5399FCE1504A56F00B9E596 /* PBXTextBookmark */;
+			B5399FCF1504A56F00B9E596 /* PBXTextBookmark */ = B5399FCF1504A56F00B9E596 /* PBXTextBookmark */;
+			B5399FD01504A56F00B9E596 /* PBXTextBookmark */ = B5399FD01504A56F00B9E596 /* PBXTextBookmark */;
+			B5399FD11504A56F00B9E596 /* PBXTextBookmark */ = B5399FD11504A56F00B9E596 /* PBXTextBookmark */;
+			B5399FD41504A59E00B9E596 /* PBXTextBookmark */ = B5399FD41504A59E00B9E596 /* PBXTextBookmark */;
+			B5399FD51504A59E00B9E596 /* PBXTextBookmark */ = B5399FD51504A59E00B9E596 /* PBXTextBookmark */;
+			B5399FD81504A5E300B9E596 /* PBXTextBookmark */ = B5399FD81504A5E300B9E596 /* PBXTextBookmark */;
+			B5399FD91504A5E300B9E596 /* PBXTextBookmark */ = B5399FD91504A5E300B9E596 /* PBXTextBookmark */;
+			B5399FDA1504A5E300B9E596 /* PBXTextBookmark */ = B5399FDA1504A5E300B9E596 /* PBXTextBookmark */;
+			B5399FDF1504A6CE00B9E596 /* PBXTextBookmark */ = B5399FDF1504A6CE00B9E596 /* PBXTextBookmark */;
+			B5399FE01504A6CE00B9E596 /* PBXTextBookmark */ = B5399FE01504A6CE00B9E596 /* PBXTextBookmark */;
+			B5399FE11504A6CE00B9E596 /* PBXTextBookmark */ = B5399FE11504A6CE00B9E596 /* PBXTextBookmark */;
+			B5399FE21504A6FA00B9E596 /* PBXTextBookmark */ = B5399FE21504A6FA00B9E596 /* PBXTextBookmark */;
+			B5399FE31504A6FA00B9E596 /* PBXTextBookmark */ = B5399FE31504A6FA00B9E596 /* PBXTextBookmark */;
+			B5399FE41504A6FA00B9E596 /* PBXTextBookmark */ = B5399FE41504A6FA00B9E596 /* PBXTextBookmark */;
+			B5399FED1504A7BB00B9E596 /* PBXTextBookmark */ = B5399FED1504A7BB00B9E596 /* PBXTextBookmark */;
+			B5399FEE1504A7BB00B9E596 /* PBXTextBookmark */ = B5399FEE1504A7BB00B9E596 /* PBXTextBookmark */;
+			B5399FEF1504A7BB00B9E596 /* PBXTextBookmark */ = B5399FEF1504A7BB00B9E596 /* PBXTextBookmark */;
+			B5399FF41504A7E900B9E596 /* PBXTextBookmark */ = B5399FF41504A7E900B9E596 /* PBXTextBookmark */;
+			B5399FF71504A80E00B9E596 /* PBXTextBookmark */ = B5399FF71504A80E00B9E596 /* PBXTextBookmark */;
+			B5399FF81504A8F900B9E596 /* PBXTextBookmark */ = B5399FF81504A8F900B9E596 /* PBXTextBookmark */;
+			B5399FF91504A8F900B9E596 /* PBXTextBookmark */ = B5399FF91504A8F900B9E596 /* PBXTextBookmark */;
+			B5399FFA1504A8F900B9E596 /* PBXTextBookmark */ = B5399FFA1504A8F900B9E596 /* PBXTextBookmark */;
+			B5399FFB1504A8F900B9E596 /* PBXTextBookmark */ = B5399FFB1504A8F900B9E596 /* PBXTextBookmark */;
+			B5399FFF1504A93B00B9E596 /* PBXTextBookmark */ = B5399FFF1504A93B00B9E596 /* PBXTextBookmark */;
+			B539A0001504A93B00B9E596 /* XCBuildMessageTextBookmark */ = B539A0001504A93B00B9E596 /* XCBuildMessageTextBookmark */;
+			B539A0011504A93B00B9E596 /* PBXTextBookmark */ = B539A0011504A93B00B9E596 /* PBXTextBookmark */;
+			B539A0061504AA4400B9E596 /* PBXTextBookmark */ = B539A0061504AA4400B9E596 /* PBXTextBookmark */;
+			B539A0071504AA4400B9E596 /* PBXTextBookmark */ = B539A0071504AA4400B9E596 /* PBXTextBookmark */;
+			B539A0081504AA4400B9E596 /* PBXTextBookmark */ = B539A0081504AA4400B9E596 /* PBXTextBookmark */;
+			B539A00F1504ABE300B9E596 /* PBXTextBookmark */ = B539A00F1504ABE300B9E596 /* PBXTextBookmark */;
+			B539A0101504ABE300B9E596 /* PBXTextBookmark */ = B539A0101504ABE300B9E596 /* PBXTextBookmark */;
+			B539A0111504ABE300B9E596 /* PBXTextBookmark */ = B539A0111504ABE300B9E596 /* PBXTextBookmark */;
+			B539A0121504ABE300B9E596 /* PBXTextBookmark */ = B539A0121504ABE300B9E596 /* PBXTextBookmark */;
+			B539A0191504ACF600B9E596 /* PBXTextBookmark */ = B539A0191504ACF600B9E596 /* PBXTextBookmark */;
+			B539A01E1504AD3000B9E596 /* PBXTextBookmark */ = B539A01E1504AD3000B9E596 /* PBXTextBookmark */;
+			B539A0231504AD6900B9E596 /* PBXTextBookmark */ = B539A0231504AD6900B9E596 /* PBXTextBookmark */;
+			B539A02A1504AE4300B9E596 /* PBXTextBookmark */ = B539A02A1504AE4300B9E596 /* PBXTextBookmark */;
+			B539A02F1504AEAF00B9E596 /* PBXTextBookmark */ = B539A02F1504AEAF00B9E596 /* PBXTextBookmark */;
+			B539A0301504AEAF00B9E596 /* PBXTextBookmark */ = B539A0301504AEAF00B9E596 /* PBXTextBookmark */;
+			B539A0311504AEAF00B9E596 /* PBXTextBookmark */ = B539A0311504AEAF00B9E596 /* PBXTextBookmark */;
+			B539A0321504B36000B9E596 /* PBXTextBookmark */ = B539A0321504B36000B9E596 /* PBXTextBookmark */;
+			B539A0331504B36000B9E596 /* PBXTextBookmark */ = B539A0331504B36000B9E596 /* PBXTextBookmark */;
+			B539A0341504B36000B9E596 /* PBXTextBookmark */ = B539A0341504B36000B9E596 /* PBXTextBookmark */;
+			B539A0351504B36000B9E596 /* PBXTextBookmark */ = B539A0351504B36000B9E596 /* PBXTextBookmark */;
+			B5AE716B1504722A00981FA7 = B5AE716B1504722A00981FA7 /* PBXTextBookmark */;
+			B5AE71A415047CBC00981FA7 = B5AE71A415047CBC00981FA7 /* PBXTextBookmark */;
+			B5AE71C015047F4E00981FA7 = B5AE71C015047F4E00981FA7 /* PBXTextBookmark */;
+			B5AE71E4150481A200981FA7 = B5AE71E4150481A200981FA7 /* PBXTextBookmark */;
+			B5AE72141504851D00981FA7 = B5AE72141504851D00981FA7 /* PBXTextBookmark */;
+		};
+		sourceControlManager = B5AE700F150430DE00981FA7 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	B5399EE61504866A00B9E596 /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "Request for member 'timer' in something not a structure or union";
+		fRef = 28D7ACF70DDB3853001CB0EB /* TrackMeViewController.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 109;
+		rType = 1;
+	};
+	B5399EE71504866A00B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* TrackMeViewController.m */;
+		name = "TrackMeViewController.m: 84";
+		rLen = 0;
+		rLoc = 2559;
+		rType = 0;
+		vrLen = 500;
+		vrLoc = 1770;
+	};
+	B5399EEC1504869F00B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* TrackMeViewController.m */;
+		name = "TrackMeViewController.m: 84";
+		rLen = 0;
+		rLoc = 2559;
+		rType = 0;
+		vrLen = 500;
+		vrLoc = 1770;
+	};
+	B5399EED1504869F00B9E596 /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "No declaration of property 'timer' found in the interface";
+		fRef = 1D3623250D0F684500981E51 /* TrackMeAppDelegate.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 23;
+		rType = 1;
+	};
+	B5399EEE1504869F00B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* TrackMeAppDelegate.m */;
+		name = "TrackMeAppDelegate.m: 23";
+		rLen = 0;
+		rLoc = 524;
+		rType = 0;
+		vrLen = 412;
+		vrLoc = 326;
+	};
+	B5399EF5150486CB00B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* TrackMeAppDelegate.h */;
+		name = "TrackMeAppDelegate.h: 41";
+		rLen = 0;
+		rLoc = 997;
+		rType = 0;
+		vrLen = 902;
+		vrLoc = 202;
+	};
+	B5399EF6150486CB00B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF60DDB3853001CB0EB /* TrackMeViewController.h */;
+		name = "TrackMeViewController.h: 34";
+		rLen = 0;
+		rLoc = 734;
+		rType = 0;
+		vrLen = 986;
+		vrLoc = 46;
+	};
+	B5399EF7150486CB00B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* TrackMeAppDelegate.m */;
+		name = "TrackMeAppDelegate.m: 23";
+		rLen = 0;
+		rLoc = 524;
+		rType = 0;
+		vrLen = 1083;
+		vrLoc = 43;
+	};
+	B5399EF8150486CB00B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* TrackMeViewController.m */;
+		name = "TrackMeViewController.m: 84";
+		rLen = 0;
+		rLoc = 2559;
+		rType = 0;
+		vrLen = 840;
+		vrLoc = 1624;
+	};
+	B5399EF9150486CB00B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* TrackMeViewController.m */;
+		name = "TrackMeViewController.m: 40";
+		rLen = 0;
+		rLoc = 778;
+		rType = 0;
+		vrLen = 720;
+		vrLoc = 284;
+	};
+	B5399F09150487EC00B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* TrackMeViewController.m */;
+		name = "TrackMeViewController.m: 55";
+		rLen = 0;
+		rLoc = 2263;
+		rType = 0;
+		vrLen = 985;
+		vrLoc = 547;
+	};
+	B5399F101504882F00B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* TrackMeViewController.m */;
+		name = "TrackMeViewController.m: 71";
+		rLen = 0;
+		rLoc = 2263;
+		rType = 0;
+		vrLen = 1128;
+		vrLoc = 1003;
+	};
+	B5399F13150488D900B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* TrackMeViewController.m */;
+		name = "TrackMeViewController.m: 58";
+		rLen = 0;
+		rLoc = 2263;
+		rType = 0;
+		vrLen = 1261;
+		vrLoc = 1003;
+	};
+	B5399F18150488E400B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* TrackMeViewController.m */;
+		name = "TrackMeViewController.m: 58";
+		rLen = 0;
+		rLoc = 2263;
+		rType = 0;
+		vrLen = 1185;
+		vrLoc = 1003;
+	};
+	B5399F191504892C00B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* TrackMeViewController.m */;
+		name = "TrackMeViewController.m: 75";
+		rLen = 0;
+		rLoc = 2263;
+		rType = 0;
+		vrLen = 1247;
+		vrLoc = 1003;
+	};
+	B5399F1E1504894800B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* TrackMeViewController.m */;
+		name = "TrackMeViewController.m: 77";
+		rLen = 0;
+		rLoc = 2263;
+		rType = 0;
+		vrLen = 1140;
+		vrLoc = 1003;
+	};
+	B5399F231504897D00B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* TrackMeViewController.m */;
+		name = "TrackMeViewController.m: 75";
+		rLen = 0;
+		rLoc = 2263;
+		rType = 0;
+		vrLen = 1141;
+		vrLoc = 1003;
+	};
+	B5399F2815048EFC00B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* TrackMeViewController.m */;
+		name = "TrackMeViewController.m: 75";
+		rLen = 0;
+		rLoc = 2263;
+		rType = 0;
+		vrLen = 1188;
+		vrLoc = 1003;
+	};
+	B5399F2915048EFC00B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF60DDB3853001CB0EB /* TrackMeViewController.h */;
+		name = "TrackMeViewController.h: 34";
+		rLen = 0;
+		rLoc = 734;
+		rType = 0;
+		vrLen = 986;
+		vrLoc = 46;
+	};
+	B5399F2A15048EFC00B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF60DDB3853001CB0EB /* TrackMeViewController.h */;
+		name = "TrackMeViewController.h: 37";
+		rLen = 0;
+		rLoc = 769;
+		rType = 0;
+		vrLen = 887;
+		vrLoc = 140;
+	};
+	B5399F2F1504913600B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF60DDB3853001CB0EB /* TrackMeViewController.h */;
+		name = "TrackMeViewController.h: 37";
+		rLen = 0;
+		rLoc = 769;
+		rType = 0;
+		vrLen = 899;
+		vrLoc = 140;
+	};
+	B5399F301504913600B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* TrackMeAppDelegate.m */;
+		name = "TrackMeAppDelegate.m: 91";
+		rLen = 0;
+		rLoc = 2886;
+		rType = 0;
+		vrLen = 1640;
+		vrLoc = 1662;
+	};
+	B5399F311504913600B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* TrackMeViewController.m */;
+		name = "TrackMeViewController.m: 75";
+		rLen = 0;
+		rLoc = 2263;
+		rType = 0;
+		vrLen = 1133;
+		vrLoc = 621;
+	};
+	B5399F321504913600B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* TrackMeViewController.m */;
+		name = "TrackMeViewController.m: 35";
+		rLen = 0;
+		rLoc = 579;
+		rType = 0;
+		vrLen = 808;
+		vrLoc = 175;
+	};
+	B5399F37150492B600B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* TrackMeViewController.m */;
+		name = "TrackMeViewController.m: 32";
+		rLen = 0;
+		rLoc = 579;
+		rType = 0;
+		vrLen = 1963;
+		vrLoc = 451;
+	};
+	B5399F3A1504940F00B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* TrackMeAppDelegate.m */;
+		name = "TrackMeAppDelegate.m: 23";
+		rLen = 0;
+		rLoc = 524;
+		rType = 0;
+		vrLen = 412;
+		vrLoc = 326;
+	};
+	B5399F3B1504940F00B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* TrackMeViewController.m */;
+		name = "TrackMeViewController.m: 73";
+		rLen = 0;
+		rLoc = 2263;
+		rType = 0;
+		vrLen = 584;
+		vrLoc = 1523;
+	};
+	B5399F3C1504940F00B9E596 /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "No 'assign', 'retain', or 'copy' attribute is specified - 'assign' is assumed";
+		fRef = 28D7ACF60DDB3853001CB0EB /* TrackMeViewController.h */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 40;
+		rType = 1;
+	};
+	B5399F3D1504940F00B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF60DDB3853001CB0EB /* TrackMeViewController.h */;
+		name = "TrackMeViewController.h: 37";
+		rLen = 0;
+		rLoc = 760;
+		rType = 0;
+		vrLen = 484;
+		vrLoc = 534;
+	};
+	B5399F421504944000B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* TrackMeViewController.m */;
+		name = "TrackMeViewController.m: 32";
+		rLen = 0;
+		rLoc = 579;
+		rType = 0;
+		vrLen = 1273;
+		vrLoc = 733;
+	};
+	B5399F431504944000B9E596 /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "No 'assign', 'retain', or 'copy' attribute is specified - 'assign' is assumed";
+		fRef = 28D7ACF60DDB3853001CB0EB /* TrackMeViewController.h */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 40;
+		rType = 1;
+	};
+	B5399F441504944000B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF60DDB3853001CB0EB /* TrackMeViewController.h */;
+		name = "TrackMeViewController.h: 37";
+		rLen = 0;
+		rLoc = 788;
+		rType = 0;
+		vrLen = 884;
+		vrLoc = 137;
+	};
+	B5399F491504945800B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF60DDB3853001CB0EB /* TrackMeViewController.h */;
+		name = "TrackMeViewController.h: 37";
+		rLen = 0;
+		rLoc = 788;
+		rType = 0;
+		vrLen = 882;
+		vrLoc = 137;
+	};
+	B5399F501504972000B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF60DDB3853001CB0EB /* TrackMeViewController.h */;
+		name = "TrackMeViewController.h: 37";
+		rLen = 0;
+		rLoc = 774;
+		rType = 0;
+		vrLen = 901;
+		vrLoc = 137;
+	};
+	B5399F511504972000B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* TrackMeViewController.m */;
+		name = "TrackMeViewController.m: 32";
+		rLen = 0;
+		rLoc = 579;
+		rType = 0;
+		vrLen = 1273;
+		vrLoc = 733;
+	};
+	B5399F521504972000B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* TrackMeViewController.m */;
+		name = "TrackMeViewController.m: 75";
+		rLen = 0;
+		rLoc = 2263;
+		rType = 0;
+		vrLen = 1212;
+		vrLoc = 938;
+	};
+	B5399F571504973400B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* TrackMeViewController.m */;
+		name = "TrackMeViewController.m: 75";
+		rLen = 0;
+		rLoc = 2263;
+		rType = 0;
+		vrLen = 1203;
+		vrLoc = 938;
+	};
+	B5399F581504974F00B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* TrackMeViewController.m */;
+		name = "TrackMeViewController.m: 74";
+		rLen = 0;
+		rLoc = 2263;
+		rType = 0;
+		vrLen = 1191;
+		vrLoc = 938;
+	};
+	B5399F5D1504977400B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* TrackMeViewController.m */;
+		name = "TrackMeViewController.m: 32";
+		rLen = 0;
+		rLoc = 579;
+		rType = 0;
+		vrLen = 1002;
+		vrLoc = 436;
+	};
+	B5399F5E1504979800B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* TrackMeViewController.m */;
+		name = "TrackMeViewController.m: 32";
+		rLen = 0;
+		rLoc = 579;
+		rType = 0;
+		vrLen = 1184;
+		vrLoc = 436;
+	};
+	B5399F6915049B5900B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* TrackMeAppDelegate.m */;
+		name = "TrackMeAppDelegate.m: 91";
+		rLen = 0;
+		rLoc = 2886;
+		rType = 0;
+		vrLen = 917;
+		vrLoc = 2322;
+	};
+	B5399F6A15049B5900B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* TrackMeViewController.m */;
+		name = "TrackMeViewController.m: 56";
+		rLen = 0;
+		rLoc = 1330;
+		rType = 0;
+		vrLen = 1703;
+		vrLoc = 436;
+	};
+	B5399F6B15049B5900B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* TrackMeViewController.m */;
+		name = "TrackMeViewController.m: 104";
+		rLen = 0;
+		rLoc = 2559;
+		rType = 0;
+		vrLen = 773;
+		vrLoc = 2192;
+	};
+	B5399F7315049CFB00B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF60DDB3853001CB0EB /* TrackMeViewController.h */;
+		name = "TrackMeViewController.h: 37";
+		rLen = 0;
+		rLoc = 760;
+		rType = 0;
+		vrLen = 504;
+		vrLoc = 533;
+	};
+	B5399F7415049CFB00B9E596 /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "Format not a string literal and no format arguments";
+		fRef = 28D7ACF70DDB3853001CB0EB /* TrackMeViewController.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 0;
+		rLoc = 100;
+		rType = 1;
+	};
+	B5399F7515049CFB00B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* TrackMeViewController.m */;
+		name = "TrackMeViewController.m: 85";
+		rLen = 0;
+		rLoc = 2263;
+		rType = 0;
+		vrLen = 417;
+		vrLoc = 1992;
+	};
+	B5399F7E15049D4000B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF60DDB3853001CB0EB /* TrackMeViewController.h */;
+		name = "TrackMeViewController.h: 15";
+		rLen = 0;
+		rLoc = 390;
+		rType = 0;
+		vrLen = 899;
+		vrLoc = 137;
+	};
+	B5399F7F15049D4000B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* TrackMeAppDelegate.h */;
+		name = "TrackMeAppDelegate.h: 41";
+		rLen = 0;
+		rLoc = 997;
+		rType = 0;
+		vrLen = 873;
+		vrLoc = 231;
+	};
+	B5399F8015049D4000B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* TrackMeAppDelegate.m */;
+		name = "TrackMeAppDelegate.m: 89";
+		rLen = 0;
+		rLoc = 2862;
+		rType = 0;
+		vrLen = 916;
+		vrLoc = 2322;
+	};
+	B5399F8115049D4000B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* TrackMeViewController.m */;
+		name = "TrackMeViewController.m: 47";
+		rLen = 0;
+		rLoc = 778;
+		rType = 0;
+		vrLen = 858;
+		vrLoc = 258;
+	};
+	B5399F8215049D4000B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* TrackMeViewController.m */;
+		name = "TrackMeViewController.m: 35";
+		rLen = 0;
+		rLoc = 579;
+		rType = 0;
+		vrLen = 1013;
+		vrLoc = 436;
+	};
+	B5399F8F1504A16400B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* TrackMeViewController.m */;
+		name = "TrackMeViewController.m: 73";
+		rLen = 0;
+		rLoc = 2263;
+		rType = 0;
+		vrLen = 505;
+		vrLoc = 1425;
+	};
+	B5399F901504A16400B9E596 /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "Type of property 'elapsedTime' does not match type of ivar 'elapsedTime'";
+		fRef = 1D3623250D0F684500981E51 /* TrackMeAppDelegate.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 23;
+		rType = 1;
+	};
+	B5399F911504A16400B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* TrackMeAppDelegate.m */;
+		name = "TrackMeAppDelegate.m: 23";
+		rLen = 0;
+		rLoc = 481;
+		rType = 0;
+		vrLen = 869;
+		vrLoc = 278;
+	};
+	B5399F961504A17900B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* TrackMeViewController.m */;
+		name = "TrackMeViewController.m: 35";
+		rLen = 0;
+		rLoc = 579;
+		rType = 0;
+		vrLen = 1074;
+		vrLoc = 436;
+	};
+	B5399F971504A17900B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF60DDB3853001CB0EB /* TrackMeViewController.h */;
+		name = "TrackMeViewController.h: 15";
+		rLen = 0;
+		rLoc = 390;
+		rType = 0;
+		vrLen = 899;
+		vrLoc = 137;
+	};
+	B5399F981504A17900B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* TrackMeAppDelegate.m */;
+		name = "TrackMeAppDelegate.m: 23";
+		rLen = 0;
+		rLoc = 481;
+		rType = 0;
+		vrLen = 2557;
+		vrLoc = 40;
+	};
+	B5399F991504A17900B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* TrackMeAppDelegate.h */;
+		name = "TrackMeAppDelegate.h: 47";
+		rLen = 0;
+		rLoc = 1227;
+		rType = 0;
+		vrLen = 864;
+		vrLoc = 231;
+	};
+	B5399F9A1504A17900B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* TrackMeAppDelegate.h */;
+		name = "TrackMeAppDelegate.h: 47";
+		rLen = 0;
+		rLoc = 1215;
+		rType = 0;
+		vrLen = 894;
+		vrLoc = 202;
+	};
+	B5399FA51504A29A00B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* TrackMeAppDelegate.h */;
+		name = "TrackMeAppDelegate.h: 47";
+		rLen = 0;
+		rLoc = 1215;
+		rType = 0;
+		vrLen = 895;
+		vrLoc = 202;
+	};
+	B5399FA61504A29A00B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* TrackMeAppDelegate.m */;
+		name = "TrackMeAppDelegate.m: 23";
+		rLen = 0;
+		rLoc = 481;
+		rType = 0;
+		vrLen = 2557;
+		vrLoc = 40;
+	};
+	B5399FA71504A29A00B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF60DDB3853001CB0EB /* TrackMeViewController.h */;
+		name = "TrackMeViewController.h: 12";
+		rLen = 0;
+		rLoc = 304;
+		rType = 0;
+		vrLen = 948;
+		vrLoc = 46;
+	};
+	B5399FA81504A29A00B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* TrackMeViewController.m */;
+		name = "TrackMeViewController.m: 72";
+		rLen = 0;
+		rLoc = 2263;
+		rType = 0;
+		vrLen = 793;
+		vrLoc = 0;
+	};
+	B5399FA91504A29A00B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* TrackMeViewController.m */;
+		name = "TrackMeViewController.m: 93";
+		rLen = 0;
+		rLoc = 2263;
+		rType = 0;
+		vrLen = 1324;
+		vrLoc = 1123;
+	};
+	B5399FAE1504A31400B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* TrackMeViewController.m */;
+		name = "TrackMeViewController.m: 82";
+		rLen = 0;
+		rLoc = 2263;
+		rType = 0;
+		vrLen = 1557;
+		vrLoc = 1123;
+	};
+	B5399FB31504A3AA00B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* TrackMeAppDelegate.m */;
+		name = "TrackMeAppDelegate.m: 23";
+		rLen = 0;
+		rLoc = 481;
+		rType = 0;
+		vrLen = 2649;
+		vrLoc = 134;
+	};
+	B5399FB41504A3AA00B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* TrackMeViewController.m */;
+		name = "TrackMeViewController.m: 33";
+		rLen = 0;
+		rLoc = 579;
+		rType = 0;
+		vrLen = 1559;
+		vrLoc = 435;
+	};
+	B5399FB51504A3AA00B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* TrackMeViewController.m */;
+		name = "TrackMeViewController.m: 33";
+		rLen = 0;
+		rLoc = 579;
+		rType = 0;
+		vrLen = 1508;
+		vrLoc = 434;
+	};
+	B5399FBB1504A4C500B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* TrackMeAppDelegate.m */;
+		name = "TrackMeAppDelegate.m: 23";
+		rLen = 0;
+		rLoc = 481;
+		rType = 0;
+		vrLen = 1326;
+		vrLoc = 355;
+	};
+	B5399FBC1504A4C500B9E596 /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "Request for member 'timer' in something not a structure or union";
+		fRef = 28D7ACF70DDB3853001CB0EB /* TrackMeViewController.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 0;
+		rLoc = 29;
+		rType = 1;
+	};
+	B5399FBD1504A4C500B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* TrackMeViewController.m */;
+		name = "TrackMeViewController.m: 30";
+		rLen = 0;
+		rLoc = 579;
+		rType = 0;
+		vrLen = 400;
+		vrLoc = 432;
+	};
+	B5399FC41504A4FD00B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* TrackMeAppDelegate.h */;
+		name = "TrackMeAppDelegate.h: 45";
+		rLen = 0;
+		rLoc = 1083;
+		rType = 0;
+		vrLen = 877;
+		vrLoc = 292;
+	};
+	B5399FC51504A4FD00B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF60DDB3853001CB0EB /* TrackMeViewController.h */;
+		name = "TrackMeViewController.h: 30";
+		rLen = 0;
+		rLoc = 603;
+		rType = 0;
+		vrLen = 903;
+		vrLoc = 88;
+	};
+	B5399FC61504A4FD00B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* TrackMeViewController.m */;
+		name = "TrackMeViewController.m: 30";
+		rLen = 0;
+		rLoc = 579;
+		rType = 0;
+		vrLen = 819;
+		vrLoc = 43;
+	};
+	B5399FC71504A4FD00B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* TrackMeAppDelegate.m */;
+		name = "TrackMeAppDelegate.m: 119";
+		rLen = 0;
+		rLoc = 3531;
+		rType = 0;
+		vrLen = 1024;
+		vrLoc = 3169;
+	};
+	B5399FC81504A4FD00B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* TrackMeAppDelegate.m */;
+		name = "TrackMeAppDelegate.m: 104";
+		rLen = 0;
+		rLoc = 3307;
+		rType = 0;
+		vrLen = 859;
+		vrLoc = 2803;
+	};
+	B5399FCD1504A56F00B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* TrackMeAppDelegate.m */;
+		name = "TrackMeAppDelegate.m: 104";
+		rLen = 0;
+		rLoc = 3307;
+		rType = 0;
+		vrLen = 1137;
+		vrLoc = 2343;
+	};
+	B5399FCE1504A56F00B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* TrackMeAppDelegate.h */;
+		name = "TrackMeAppDelegate.h: 17";
+		rLen = 18;
+		rLoc = 326;
+		rType = 0;
+		vrLen = 765;
+		vrLoc = 43;
+	};
+	B5399FCF1504A56F00B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF60DDB3853001CB0EB /* TrackMeViewController.h */;
+		name = "TrackMeViewController.h: 12";
+		rLen = 0;
+		rLoc = 304;
+		rType = 0;
+		vrLen = 829;
+		vrLoc = 137;
+	};
+	B5399FD01504A56F00B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* TrackMeViewController.m */;
+		name = "TrackMeViewController.m: 47";
+		rLen = 0;
+		rLoc = 1068;
+		rType = 0;
+		vrLen = 832;
+		vrLoc = 0;
+	};
+	B5399FD11504A56F00B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* TrackMeViewController.m */;
+		name = "TrackMeViewController.m: 47";
+		rLen = 0;
+		rLoc = 1068;
+		rType = 0;
+		vrLen = 826;
+		vrLoc = 338;
+	};
+	B5399FD41504A59E00B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* TrackMeViewController.m */;
+		name = "TrackMeViewController.m: 47";
+		rLen = 0;
+		rLoc = 1068;
+		rType = 0;
+		vrLen = 1196;
+		vrLoc = 460;
+	};
+	B5399FD51504A59E00B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* TrackMeAppDelegate.m */;
+		name = "TrackMeAppDelegate.m: 111";
+		rLen = 0;
+		rLoc = 3380;
+		rType = 0;
+		vrLen = 1114;
+		vrLoc = 2343;
+	};
+	B5399FD81504A5E300B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* TrackMeAppDelegate.m */;
+		name = "TrackMeAppDelegate.m: 111";
+		rLen = 0;
+		rLoc = 3380;
+		rType = 0;
+		vrLen = 1137;
+		vrLoc = 2343;
+	};
+	B5399FD91504A5E300B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* TrackMeViewController.m */;
+		name = "TrackMeViewController.m: 47";
+		rLen = 0;
+		rLoc = 1068;
+		rType = 0;
+		vrLen = 1196;
+		vrLoc = 460;
+	};
+	B5399FDA1504A5E300B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* TrackMeViewController.m */;
+		name = "TrackMeViewController.m: 51";
+		rLen = 0;
+		rLoc = 1329;
+		rType = 0;
+		vrLen = 1011;
+		vrLoc = 460;
+	};
+	B5399FDF1504A6CE00B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF60DDB3853001CB0EB /* TrackMeViewController.h */;
+		name = "TrackMeViewController.h: 34";
+		rLen = 43;
+		rLoc = 604;
+		rType = 0;
+		vrLen = 876;
+		vrLoc = 46;
+	};
+	B5399FE01504A6CE00B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* TrackMeViewController.m */;
+		name = "TrackMeViewController.m: 38";
+		rLen = 0;
+		rLoc = 894;
+		rType = 0;
+		vrLen = 909;
+		vrLoc = 258;
+	};
+	B5399FE11504A6CE00B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* TrackMeViewController.m */;
+		name = "TrackMeViewController.m: 75";
+		rLen = 0;
+		rLoc = 2562;
+		rType = 0;
+		vrLen = 1910;
+		vrLoc = 215;
+	};
+	B5399FE21504A6FA00B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* TrackMeViewController.m */;
+		name = "TrackMeViewController.m: 75";
+		rLen = 0;
+		rLoc = 2562;
+		rType = 0;
+		vrLen = 1910;
+		vrLoc = 215;
+	};
+	B5399FE31504A6FA00B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* TrackMeAppDelegate.m */;
+		name = "TrackMeAppDelegate.m: 111";
+		rLen = 0;
+		rLoc = 3380;
+		rType = 0;
+		vrLen = 1136;
+		vrLoc = 2344;
+	};
+	B5399FE41504A6FA00B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF60DDB3853001CB0EB /* TrackMeViewController.h */;
+		name = "TrackMeViewController.h: 13";
+		rLen = 0;
+		rLoc = 264;
+		rType = 0;
+		vrLen = 877;
+		vrLoc = 46;
+	};
+	B5399FED1504A7BB00B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF60DDB3853001CB0EB /* TrackMeViewController.h */;
+		name = "TrackMeViewController.h: 13";
+		rLen = 0;
+		rLoc = 264;
+		rType = 0;
+		vrLen = 877;
+		vrLoc = 46;
+	};
+	B5399FEE1504A7BB00B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* TrackMeAppDelegate.m */;
+		name = "TrackMeAppDelegate.m: 111";
+		rLen = 0;
+		rLoc = 3380;
+		rType = 0;
+		vrLen = 1136;
+		vrLoc = 2344;
+	};
+	B5399FEF1504A7BB00B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* TrackMeViewController.m */;
+		name = "TrackMeViewController.m: 52";
+		rLen = 0;
+		rLoc = 1021;
+		rType = 0;
+		vrLen = 1730;
+		vrLoc = 365;
+	};
+	B5399FF41504A7E900B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* TrackMeViewController.m */;
+		name = "TrackMeViewController.m: 57";
+		rLen = 0;
+		rLoc = 1329;
+		rType = 0;
+		vrLen = 1585;
+		vrLoc = 365;
+	};
+	B5399FF71504A80E00B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* TrackMeViewController.m */;
+		name = "TrackMeViewController.m: 58";
+		rLen = 0;
+		rLoc = 1329;
+		rType = 0;
+		vrLen = 1675;
+		vrLoc = 338;
+	};
+	B5399FF81504A8F900B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF60DDB3853001CB0EB /* TrackMeViewController.h */;
+		name = "TrackMeViewController.h: 35";
+		rLen = 24;
+		rLoc = 648;
+		rType = 0;
+		vrLen = 874;
+		vrLoc = 137;
+	};
+	B5399FF91504A8F900B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* TrackMeViewController.m */;
+		name = "TrackMeViewController.m: 70";
+		rLen = 0;
+		rLoc = 2262;
+		rType = 0;
+		vrLen = 1880;
+		vrLoc = 365;
+	};
+	B5399FFA1504A8F900B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* TrackMeAppDelegate.m */;
+		name = "TrackMeAppDelegate.m: 151";
+		rLen = 0;
+		rLoc = 4656;
+		rType = 0;
+		vrLen = 2058;
+		vrLoc = 3457;
+	};
+	B5399FFB1504A8F900B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* TrackMeAppDelegate.m */;
+		name = "TrackMeAppDelegate.m: 151";
+		rLen = 0;
+		rLoc = 4656;
+		rType = 0;
+		vrLen = 2057;
+		vrLoc = 3457;
+	};
+	B5399FFF1504A93B00B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* TrackMeViewController.m */;
+		name = "TrackMeViewController.m: 30";
+		rLen = 0;
+		rLoc = 579;
+		rType = 0;
+		vrLen = 278;
+		vrLoc = 663;
+	};
+	B539A0001504A93B00B9E596 /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "'locationServicesEnabled' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CLLocationManager.h:124)";
+		fRef = 1D3623250D0F684500981E51 /* TrackMeAppDelegate.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 101;
+		rType = 1;
+	};
+	B539A0011504A93B00B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* TrackMeAppDelegate.m */;
+		name = "TrackMeAppDelegate.m: 102";
+		rLen = 0;
+		rLoc = 3059;
+		rType = 0;
+		vrLen = 473;
+		vrLoc = 2887;
+	};
+	B539A0061504AA4400B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* TrackMeAppDelegate.m */;
+		name = "TrackMeAppDelegate.m: 102";
+		rLen = 0;
+		rLoc = 3059;
+		rType = 0;
+		vrLen = 1449;
+		vrLoc = 2617;
+	};
+	B539A0071504AA4400B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* TrackMeViewController.m */;
+		name = "TrackMeViewController.m: 70";
+		rLen = 0;
+		rLoc = 2262;
+		rType = 0;
+		vrLen = 881;
+		vrLoc = 417;
+	};
+	B539A0081504AA4400B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* TrackMeViewController.m */;
+		name = "TrackMeViewController.m: 80";
+		rLen = 0;
+		rLoc = 2200;
+		rType = 0;
+		vrLen = 965;
+		vrLoc = 925;
+	};
+	B539A00F1504ABE300B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* TrackMeAppDelegate.h */;
+		name = "TrackMeAppDelegate.h: 17";
+		rLen = 18;
+		rLoc = 326;
+		rType = 0;
+		vrLen = 767;
+		vrLoc = 40;
+	};
+	B539A0101504ABE300B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* TrackMeAppDelegate.m */;
+		name = "TrackMeAppDelegate.m: 151";
+		rLen = 0;
+		rLoc = 4525;
+		rType = 0;
+		vrLen = 1399;
+		vrLoc = 3365;
+	};
+	B539A0111504ABE300B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* TrackMeViewController.m */;
+		name = "TrackMeViewController.m: 81";
+		rLen = 0;
+		rLoc = 1781;
+		rType = 0;
+		vrLen = 887;
+		vrLoc = 1145;
+	};
+	B539A0121504ABE300B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* TrackMeViewController.m */;
+		name = "TrackMeViewController.m: 86";
+		rLen = 0;
+		rLoc = 1909;
+		rType = 0;
+		vrLen = 862;
+		vrLoc = 1297;
+	};
+	B539A0191504ACF600B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* TrackMeViewController.m */;
+		name = "TrackMeViewController.m: 90";
+		rLen = 0;
+		rLoc = 2042;
+		rType = 0;
+		vrLen = 924;
+		vrLoc = 1297;
+	};
+	B539A01E1504AD3000B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* TrackMeViewController.m */;
+		name = "TrackMeViewController.m: 75";
+		rLen = 0;
+		rLoc = 1699;
+		rType = 0;
+		vrLen = 926;
+		vrLoc = 1297;
+	};
+	B539A0231504AD6900B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* TrackMeViewController.m */;
+		name = "TrackMeViewController.m: 93";
+		rLen = 0;
+		rLoc = 2101;
+		rType = 0;
+		vrLen = 920;
+		vrLoc = 1297;
+	};
+	B539A02A1504AE4300B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* TrackMeViewController.m */;
+		name = "TrackMeViewController.m: 56";
+		rLen = 0;
+		rLoc = 1215;
+		rType = 0;
+		vrLen = 909;
+		vrLoc = 663;
+	};
+	B539A02F1504AEAF00B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* TrackMeViewController.m */;
+		name = "TrackMeViewController.m: 56";
+		rLen = 0;
+		rLoc = 1215;
+		rType = 0;
+		vrLen = 987;
+		vrLoc = 663;
+	};
+	B539A0301504AEAF00B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF60DDB3853001CB0EB /* TrackMeViewController.h */;
+		name = "TrackMeViewController.h: 35";
+		rLen = 24;
+		rLoc = 648;
+		rType = 0;
+		vrLen = 874;
+		vrLoc = 137;
+	};
+	B539A0311504AEAF00B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* TrackMeAppDelegate.m */;
+		name = "TrackMeAppDelegate.m: 156";
+		rLen = 0;
+		rLoc = 4656;
+		rType = 0;
+		vrLen = 1397;
+		vrLoc = 3365;
+	};
+	B539A0321504B36000B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* TrackMeAppDelegate.h */;
+		name = "TrackMeAppDelegate.h: 17";
+		rLen = 18;
+		rLoc = 326;
+		rType = 0;
+		vrLen = 767;
+		vrLoc = 40;
+	};
+	B539A0331504B36000B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* TrackMeAppDelegate.m */;
+		name = "TrackMeAppDelegate.m: 155";
+		rLen = 0;
+		rLoc = 4656;
+		rType = 0;
+		vrLen = 2106;
+		vrLoc = 0;
+	};
+	B539A0341504B36000B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF60DDB3853001CB0EB /* TrackMeViewController.h */;
+		name = "TrackMeViewController.h: 35";
+		rLen = 24;
+		rLoc = 648;
+		rType = 0;
+		vrLen = 874;
+		vrLoc = 137;
+	};
+	B539A0351504B36000B9E596 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* TrackMeViewController.m */;
+		name = "TrackMeViewController.m: 93";
+		rLen = 0;
+		rLoc = 2101;
+		rType = 0;
+		vrLen = 915;
+		vrLoc = 1647;
+	};
+	B5AE700B150430BF00981FA7 /* TrackMe */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = TrackMe;
+		savedGlobals = {
+		};
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+		variableFormatDictionary = {
+		};
+	};
+	B5AE700F150430DE00981FA7 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	B5AE7010150430DE00981FA7 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	B5AE716B1504722A00981FA7 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF60DDB3853001CB0EB /* TrackMeViewController.h */;
+		name = "TrackMeViewController.h: 28";
+		rLen = 0;
+		rLoc = 603;
+		rType = 0;
+		vrLen = 922;
+		vrLoc = 43;
+	};
+	B5AE71A415047CBC00981FA7 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* TrackMeAppDelegate.h */;
+		name = "TrackMeAppDelegate.h: 44";
+		rLen = 0;
+		rLoc = 997;
+		rType = 0;
+		vrLen = 918;
+		vrLoc = 260;
+	};
+	B5AE71C015047F4E00981FA7 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* TrackMeViewController.m */;
+		name = "TrackMeViewController.m: 75";
+		rLen = 0;
+		rLoc = 2559;
+		rType = 0;
+		vrLen = 756;
+		vrLoc = 237;
+	};
+	B5AE71E4150481A200981FA7 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* TrackMeAppDelegate.m */;
+		rLen = 1;
+		rLoc = 63;
+		rType = 1;
+	};
+	B5AE72141504851D00981FA7 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* TrackMeAppDelegate.m */;
+		name = "TrackMeAppDelegate.m: 136";
+		rLen = 0;
+		rLoc = 3455;
+		rType = 0;
+		vrLen = 1529;
+		vrLoc = 2756;
+	};
+}
