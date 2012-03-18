@@ -179,20 +179,34 @@
 		NSLog(@"Moved from %@ to %@", oldLocation, newLocation);
 				
 		if (oldLocation == NULL) {
+			
+			// Display initial location
+			[self updateMap:NULL newLocation:newLocation];
+			
 			return;
 		}
 		
 		double speed = fabs(newLocation.speed);
 		double deltaDist = fabs([newLocation distanceFromLocation:oldLocation]);
 		double newAvgSpeed = (self.totalDistance + deltaDist) / self.elapsedTime;
+		double accuracy = newLocation.horizontalAccuracy;
 		
-		if (deltaDist < MIN_DIST_CHANGE || deltaDist > MAX_DIST_CHANGE || speed > MAX_SPEED || newAvgSpeed > MAX_SPEED) {
+		if (accuracy < 0 ||
+			deltaDist < accuracy || 
+			deltaDist < MIN_DIST_CHANGE || 
+			deltaDist > MAX_DIST_CHANGE || 
+			speed > MAX_SPEED || 
+			newAvgSpeed > MAX_SPEED) {
 			NSLog(@"Ignoring invalid location change");
 		}
 		else {
 		
 			NSLog(@"Previous distance = %f", self.totalDistance);
 		
+			if (self.totalDistance < 0 || self.numPoints == 0) {
+				self.totalDistance = 0;
+			}
+			
 			self.totalDistance += deltaDist;
 			self.currentSpeed = speed;
 			self.avgSpeed = newAvgSpeed;
@@ -200,14 +214,18 @@
 			NSLog(@"Delta distance = %f", deltaDist);
 			NSLog(@"New distance = %f", self.totalDistance);
 		
+			// Add new location to path
 			[self.locationPoints addObject:newLocation];
 			self.numPoints++;
 		
+			// Update stats display
 			[self.viewController updateRunDisplay];
+			
+			// Update map view
+			[self updateMap:oldLocation newLocation:newLocation];
 			
 		}
 		
-		[self updateMap:oldLocation newLocation:newLocation];
 	}
 	
 }

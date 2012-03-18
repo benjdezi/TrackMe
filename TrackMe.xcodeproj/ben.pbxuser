@@ -2,18 +2,18 @@
 {
 	1D3623240D0F684500981E51 /* TrackMeAppDelegate.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1099, 871}}";
-			sepNavSelRange = "{226, 0}";
-			sepNavVisRange = "{3, 819}";
+			sepNavIntBoundsRect = "{{0, 0}, {1099, 858}}";
+			sepNavSelRange = "{614, 0}";
+			sepNavVisRange = "{3, 1037}";
 			sepNavWindowFrame = "{{15, 69}, {1220, 804}}";
 		};
 	};
 	1D3623250D0F684500981E51 /* TrackMeAppDelegate.m */ = {
 		uiCtxt = {
-			sepNavFolds = "{\n    c =     (\n                {\n            r = \"{3736, 531}\";\n            s = 0;\n        }\n    );\n    r = \"{0, 7360}\";\n    s = 0;\n}";
-			sepNavIntBoundsRect = "{{0, 0}, {1328, 3224}}";
-			sepNavSelRange = "{4278, 0}";
-			sepNavVisRange = "{3740, 1087}";
+			sepNavFolds = "{\n    c =     (\n                {\n            r = \"{3736, 531}\";\n            s = 0;\n        }\n    );\n    r = \"{0, 7649}\";\n    s = 0;\n}";
+			sepNavIntBoundsRect = "{{0, 0}, {1099, 3497}}";
+			sepNavSelRange = "{5979, 0}";
+			sepNavVisRange = "{5134, 911}";
 			sepNavWindowFrame = "{{15, 69}, {1220, 804}}";
 		};
 	};
@@ -203,6 +203,16 @@
 			B5F4BBB91515F48E00F511B2 /* PlistBookmark */ = B5F4BBB91515F48E00F511B2 /* PlistBookmark */;
 			B5F4BBBC1515F4C000F511B2 /* PBXTextBookmark */ = B5F4BBBC1515F4C000F511B2 /* PBXTextBookmark */;
 			B5F4BBBD1515F4C000F511B2 /* PlistBookmark */ = B5F4BBBD1515F4C000F511B2 /* PlistBookmark */;
+			B5F4BBF01515F7EA00F511B2 /* PBXTextBookmark */ = B5F4BBF01515F7EA00F511B2 /* PBXTextBookmark */;
+			B5F4BBF21515F7EA00F511B2 /* PBXTextBookmark */ = B5F4BBF21515F7EA00F511B2 /* PBXTextBookmark */;
+			B5F4BBF31515F7EA00F511B2 /* PBXTextBookmark */ = B5F4BBF31515F7EA00F511B2 /* PBXTextBookmark */;
+			B5F4BBF41515F7EA00F511B2 /* PlistBookmark */ = B5F4BBF41515F7EA00F511B2 /* PlistBookmark */;
+			B5F4BBF71515F8AE00F511B2 /* PBXTextBookmark */ = B5F4BBF71515F8AE00F511B2 /* PBXTextBookmark */;
+			B5F4BBF81515F8AE00F511B2 /* PlistBookmark */ = B5F4BBF81515F8AE00F511B2 /* PlistBookmark */;
+			B5F4BBFD1515FA2600F511B2 /* PBXTextBookmark */ = B5F4BBFD1515FA2600F511B2 /* PBXTextBookmark */;
+			B5F4BBFE1515FA2600F511B2 /* PBXTextBookmark */ = B5F4BBFE1515FA2600F511B2 /* PBXTextBookmark */;
+			B5F4BBFF1515FA2600F511B2 /* PBXTextBookmark */ = B5F4BBFF1515FA2600F511B2 /* PBXTextBookmark */;
+			B5F4BC001515FA2600F511B2 /* PlistBookmark */ = B5F4BC001515FA2600F511B2 /* PlistBookmark */;
 		};
 		sourceControlManager = B5AE700F150430DE00981FA7 /* Source Control */;
 		userBuildSettings = {
@@ -243,7 +253,7 @@
 		fRef = 1D3623240D0F684500981E51 /* TrackMeAppDelegate.h */;
 		name = "TrackMeAppDelegate.h: 42";
 		rLen = 41;
-		rLoc = 886;
+		rLoc = 1104;
 		rType = 0;
 		vrLen = 916;
 		vrLoc = 359;
@@ -349,7 +359,7 @@
 		fRef = 1D3623240D0F684500981E51 /* TrackMeAppDelegate.h */;
 		name = "TrackMeAppDelegate.h: 15";
 		rLen = 0;
-		rLoc = 309;
+		rLoc = 433;
 		rType = 0;
 		vrLen = 756;
 		vrLoc = 85;
@@ -369,7 +379,7 @@
 		fRef = 1D3623250D0F684500981E51 /* TrackMeAppDelegate.m */;
 		name = "TrackMeAppDelegate.m: 171";
 		rLen = 0;
-		rLoc = 6225;
+		rLoc = 6659;
 		rType = 0;
 		vrLen = 913;
 		vrLoc = 4529;
@@ -379,7 +389,7 @@
 		fRef = 1D3623250D0F684500981E51 /* TrackMeAppDelegate.m */;
 		name = "TrackMeAppDelegate.m: 172";
 		rLen = 0;
-		rLoc = 6225;
+		rLoc = 6659;
 		rType = 0;
 		vrLen = 934;
 		vrLoc = 4470;
@@ -400,7 +410,7 @@
 		fRef = 1D3623250D0F684500981E51 /* TrackMeAppDelegate.m */;
 		name = "TrackMeAppDelegate.m: 180";
 		rLen = 0;
-		rLoc = 6225;
+		rLoc = 6659;
 		rType = 0;
 		vrLen = 918;
 		vrLoc = 4562;
@@ -421,7 +431,7 @@
 		fRef = 1D3623250D0F684500981E51 /* TrackMeAppDelegate.m */;
 		name = "TrackMeAppDelegate.m: 183";
 		rLen = 0;
-		rLoc = 6225;
+		rLoc = 6659;
 		rType = 0;
 		vrLen = 991;
 		vrLoc = 4562;
@@ -504,7 +514,7 @@
 		fRef = 1D3623250D0F684500981E51 /* TrackMeAppDelegate.m */;
 		name = "TrackMeAppDelegate.m: 208";
 		rLen = 0;
-		rLoc = 6837;
+		rLoc = 7215;
 		rType = 0;
 		vrLen = 1003;
 		vrLoc = 5253;
@@ -525,7 +535,7 @@
 		fRef = 1D3623240D0F684500981E51 /* TrackMeAppDelegate.h */;
 		name = "TrackMeAppDelegate.h: 13";
 		rLen = 0;
-		rLoc = 226;
+		rLoc = 247;
 		rType = 0;
 		vrLen = 861;
 		vrLoc = 201;
@@ -617,7 +627,7 @@
 		fRef = 1D3623240D0F684500981E51 /* TrackMeAppDelegate.h */;
 		name = "TrackMeAppDelegate.h: 13";
 		rLen = 0;
-		rLoc = 226;
+		rLoc = 247;
 		rType = 0;
 		vrLen = 861;
 		vrLoc = 201;
@@ -658,7 +668,7 @@
 		fRef = 1D3623240D0F684500981E51 /* TrackMeAppDelegate.h */;
 		name = "TrackMeAppDelegate.h: 13";
 		rLen = 0;
-		rLoc = 226;
+		rLoc = 247;
 		rType = 0;
 		vrLen = 861;
 		vrLoc = 201;
@@ -739,7 +749,7 @@
 		fRef = 1D3623250D0F684500981E51 /* TrackMeAppDelegate.m */;
 		name = "TrackMeAppDelegate.m: 194";
 		rLen = 0;
-		rLoc = 6275;
+		rLoc = 6666;
 		rType = 0;
 		vrLen = 980;
 		vrLoc = 5263;
@@ -770,7 +780,7 @@
 		fRef = 1D3623250D0F684500981E51 /* TrackMeAppDelegate.m */;
 		name = "TrackMeAppDelegate.m: 194";
 		rLen = 0;
-		rLoc = 6275;
+		rLoc = 6666;
 		rType = 0;
 		vrLen = 861;
 		vrLoc = 2681;
@@ -841,7 +851,7 @@
 		fRef = 1D3623240D0F684500981E51 /* TrackMeAppDelegate.h */;
 		name = "TrackMeAppDelegate.h: 13";
 		rLen = 0;
-		rLoc = 226;
+		rLoc = 247;
 		rType = 0;
 		vrLen = 861;
 		vrLoc = 201;
@@ -1055,7 +1065,7 @@
 		fRef = 1D3623250D0F684500981E51 /* TrackMeAppDelegate.m */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 1;
-		rLoc = 258;
+		rLoc = 276;
 		rType = 1;
 	};
 	B5F4BB921515F25C00F511B2 /* PBXTextBookmark */ = {
@@ -1063,7 +1073,7 @@
 		fRef = 1D3623250D0F684500981E51 /* TrackMeAppDelegate.m */;
 		name = "TrackMeAppDelegate.m: 240";
 		rLen = 0;
-		rLoc = 7355;
+		rLoc = 7733;
 		rType = 0;
 		vrLen = 264;
 		vrLoc = 6465;
@@ -1083,7 +1093,7 @@
 		fRef = 1D3623240D0F684500981E51 /* TrackMeAppDelegate.h */;
 		name = "TrackMeAppDelegate.h: 45";
 		rLen = 0;
-		rLoc = 961;
+		rLoc = 1179;
 		rType = 0;
 		vrLen = 952;
 		vrLoc = 439;
@@ -1093,7 +1103,7 @@
 		fRef = 1D3623250D0F684500981E51 /* TrackMeAppDelegate.m */;
 		name = "TrackMeAppDelegate.m: 240";
 		rLen = 0;
-		rLoc = 7355;
+		rLoc = 7733;
 		rType = 0;
 		vrLen = 853;
 		vrLoc = 5876;
@@ -1155,7 +1165,7 @@
 		fRef = 1D3623240D0F684500981E51 /* TrackMeAppDelegate.h */;
 		name = "TrackMeAppDelegate.h: 45";
 		rLen = 0;
-		rLoc = 961;
+		rLoc = 1179;
 		rType = 0;
 		vrLen = 952;
 		vrLoc = 439;
@@ -1165,7 +1175,7 @@
 		fRef = 1D3623240D0F684500981E51 /* TrackMeAppDelegate.h */;
 		name = "TrackMeAppDelegate.h: 13";
 		rLen = 0;
-		rLoc = 226;
+		rLoc = 247;
 		rType = 0;
 		vrLen = 782;
 		vrLoc = 3;
@@ -1186,7 +1196,7 @@
 		fRef = 1D3623240D0F684500981E51 /* TrackMeAppDelegate.h */;
 		name = "TrackMeAppDelegate.h: 13";
 		rLen = 0;
-		rLoc = 226;
+		rLoc = 247;
 		rType = 0;
 		vrLen = 819;
 		vrLoc = 3;
@@ -1254,6 +1264,115 @@
 		vrLoc = 4270;
 	};
 	B5F4BBBD1515F4C000F511B2 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* TrackMe-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/ben/Documents/labs/iphone/TrackMe/TrackMe-Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	B5F4BBF01515F7EA00F511B2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = B5F4BBF11515F7EA00F511B2 /* CLLocation.h */;
+		name = "CLLocation.h: 8";
+		rLen = 0;
+		rLoc = 107;
+		rType = 0;
+		vrLen = 992;
+		vrLoc = 214;
+	};
+	B5F4BBF11515F7EA00F511B2 /* CLLocation.h */ = {
+		isa = PBXFileReference;
+		name = CLLocation.h;
+		path = /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CLLocation.h;
+		sourceTree = "<absolute>";
+	};
+	B5F4BBF21515F7EA00F511B2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* TrackMeAppDelegate.m */;
+		name = "TrackMeAppDelegate.m: 188";
+		rLen = 0;
+		rLoc = 5804;
+		rType = 0;
+		vrLen = 1056;
+		vrLoc = 4993;
+	};
+	B5F4BBF31515F7EA00F511B2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* TrackMeAppDelegate.m */;
+		name = "TrackMeAppDelegate.m: 204";
+		rLen = 0;
+		rLoc = 6194;
+		rType = 0;
+		vrLen = 946;
+		vrLoc = 5468;
+	};
+	B5F4BBF41515F7EA00F511B2 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* TrackMe-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/ben/Documents/labs/iphone/TrackMe/TrackMe-Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	B5F4BBF71515F8AE00F511B2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* TrackMeAppDelegate.m */;
+		name = "TrackMeAppDelegate.m: 202";
+		rLen = 0;
+		rLoc = 6158;
+		rType = 0;
+		vrLen = 983;
+		vrLoc = 5513;
+	};
+	B5F4BBF81515F8AE00F511B2 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* TrackMe-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/ben/Documents/labs/iphone/TrackMe/TrackMe-Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	B5F4BBFD1515FA2600F511B2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* TrackMeAppDelegate.h */;
+		name = "TrackMeAppDelegate.h: 19";
+		rLen = 0;
+		rLoc = 614;
+		rType = 0;
+		vrLen = 1037;
+		vrLoc = 3;
+	};
+	B5F4BBFE1515FA2600F511B2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* TrackMeAppDelegate.m */;
+		name = "TrackMeAppDelegate.m: 202";
+		rLen = 0;
+		rLoc = 6158;
+		rType = 0;
+		vrLen = 985;
+		vrLoc = 5513;
+	};
+	B5F4BBFF1515FA2600F511B2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* TrackMeAppDelegate.m */;
+		name = "TrackMeAppDelegate.m: 220";
+		rLen = 0;
+		rLoc = 6598;
+		rType = 0;
+		vrLen = 911;
+		vrLoc = 5664;
+	};
+	B5F4BC001515FA2600F511B2 /* PlistBookmark */ = {
 		isa = PlistBookmark;
 		fRef = 8D1107310486CEB800E47090 /* TrackMe-Info.plist */;
 		fallbackIsa = PBXBookmark;
