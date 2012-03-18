@@ -216,7 +216,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>B5F4BB391515E62000F511B2</string>
+						<string>B5F4BBBD1515F4C000F511B2</string>
 						<key>history</key>
 						<array>
 							<string>B5F4BAEE1515618200F511B2</string>
@@ -370,15 +370,15 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>B5F4BB381515E62000F511B2</string>
+										<string>B5F4BBBC1515F4C000F511B2</string>
 										<key>history</key>
 										<array>
 											<string>B5F4BB121515E31400F511B2</string>
 											<string>B5F4BB131515E31400F511B2</string>
-											<string>B5F4BB151515E31400F511B2</string>
-											<string>B5F4BB161515E31400F511B2</string>
-											<string>B5F4BB361515E62000F511B2</string>
-											<string>B5F4BB371515E62000F511B2</string>
+											<string>B5F4BB871515F0D200F511B2</string>
+											<string>B5F4BB971515F2AA00F511B2</string>
+											<string>B5F4BBAE1515F41E00F511B2</string>
+											<string>B5F4BBAF1515F41E00F511B2</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -606,7 +606,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string></string>
+								<string>TrackMeAppDelegate.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -933,7 +933,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {1440, 712}}</string>
 								<key>RubberWindowFrame</key>
-								<string>117 125 1440 753 0 0 1440 878 </string>
+								<string>0 125 1440 753 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXDebugCLIModule</string>
@@ -962,7 +962,7 @@
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.consoleV3</string>
 			<key>WindowString</key>
-			<string>117 125 1440 753 0 0 1440 878 </string>
+			<string>0 125 1440 753 0 0 1440 878 </string>
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>

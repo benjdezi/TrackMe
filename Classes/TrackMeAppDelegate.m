@@ -94,19 +94,25 @@
 	self.avgSpeed = 0;
 	self.locationPoints = [[NSMutableArray alloc] initWithCapacity:DEFAULT_NUM_POINTS];
 	self.numPoints = 0;
+	
+	// Clear map annotations
+	if (self.viewController.mapView.annotations != NULL) {
+		for (id annotation in self.viewController.mapView.annotations) {		
+			if (![annotation isKindOfClass:[MKUserLocation class]]){
+				[self.viewController.mapView removeAnnotation:annotation];
+			}
+		}
+	}
+	
 	NSLog(@"Reset stats values");
 	
 }
 
 
 -(void)start {
-	if ([self.locationManager locationServicesEnabled] == YES) {
-		[self.locationManager startUpdatingLocation];
-		self.timer = [NSTimer scheduledTimerWithTimeInterval:TIMER_PERIOD target:self selector:@selector(updateTimer) userInfo:nil repeats:YES];
-		NSLog(@"Started tracking");
-	} else {
-		NSLog(@"Service location not enabled");
-	}
+	[self.locationManager startUpdatingLocation];
+	self.timer = [NSTimer scheduledTimerWithTimeInterval:TIMER_PERIOD target:self selector:@selector(updateTimer) userInfo:nil repeats:YES];
+	NSLog(@"Started tracking");
 }
 
 
@@ -134,7 +140,7 @@
 }
 
 
--(void)updateMap:(CLLocation*)location {
+-(void)updateMap:(CLLocation*)oldLocation newLocation:(CLLocation*)location {
 	
 	double scalingFactor = ABS(cos(2 * M_PI * location.coordinate.latitude / 360.0));
 	
@@ -146,10 +152,21 @@
 	region.span = span;
 	region.center = location.coordinate;
 	
+	if (oldLocation != NULL) {
+		double deltaDist = fabs([location distanceFromLocation:oldLocation]);
+		if (deltaDist > MIN_DIST_CHANGE || self.numPoints == 1) {
+			MKPointAnnotation* annotation = [MKPointAnnotation alloc];
+			annotation.coordinate = oldLocation.coordinate;
+			[self.viewController.mapView addAnnotation:annotation];
+		}
+	}
+	
 	[self.viewController.mapView setRegion:region];
 	self.viewController.mapView.showsUserLocation = YES;
+	NSLog(@"Updated map");
 	
 }
+
 
 #pragma mark -
 #pragma mark CLLocationManager methods
@@ -190,7 +207,7 @@
 			
 		}
 		
-		[self updateMap:newLocation];
+		[self updateMap:oldLocation newLocation:newLocation];
 	}
 	
 }

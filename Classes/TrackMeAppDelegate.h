@@ -10,7 +10,7 @@
 #import <CoreLocation/CoreLocation.h>
 
 
-#define MAP_RADIUS			1.0
+#define MAP_RADIUS			0.5
 #define MIN_DIST_CHANGE		100
 #define MAX_DIST_CHANGE		1000
 #define MAX_SPEED			100
@@ -42,7 +42,7 @@
 -(void)start;
 -(void)stop;
 -(void)updateTimer;
--(void)updateMap:(CLLocation*)location;
+-(void)updateMap:(CLLocation*)oldLocation newLocation:(CLLocation*)location;
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) IBOutlet TrackMeViewController *viewController;
