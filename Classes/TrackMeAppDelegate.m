@@ -94,6 +94,7 @@
 	self.avgSpeed = 0;
 	self.locationPoints = [[NSMutableArray alloc] initWithCapacity:DEFAULT_NUM_POINTS];
 	self.numPoints = 0;
+	NSLog(@"Reset stats values");
 	
 }
 
@@ -102,6 +103,7 @@
 	if ([self.locationManager locationServicesEnabled] == YES) {
 		[self.locationManager startUpdatingLocation];
 		self.timer = [NSTimer scheduledTimerWithTimeInterval:TIMER_PERIOD target:self selector:@selector(updateTimer) userInfo:nil repeats:YES];
+		NSLog(@"Started tracking");
 	} else {
 		NSLog(@"Service location not enabled");
 	}
@@ -111,6 +113,7 @@
 -(void)stop {
 	[self.timer invalidate];
 	[self.locationManager stopUpdatingLocation];
+	NSLog(@"Stopped tracking");
 }
 
 
@@ -133,12 +136,11 @@
 
 -(void)updateMap:(CLLocation*)location {
 	
-	double miles = 12.0;
 	double scalingFactor = ABS(cos(2 * M_PI * location.coordinate.latitude / 360.0));
 	
 	MKCoordinateSpan span;
-	span.latitudeDelta = miles / 69.0;
-	span.longitudeDelta = miles / (scalingFactor * 69.0);
+	span.latitudeDelta = MAP_RADIUS / 69.0;
+	span.longitudeDelta = MAP_RADIUS / (scalingFactor * 69.0);
 	
 	MKCoordinateRegion region;
 	region.span = span;
@@ -158,20 +160,36 @@
 	if (newLocation != oldLocation) {
 		
 		NSLog(@"Moved from %@ to %@", oldLocation, newLocation);
-		
-		[self.locationPoints addObject:newLocation];
-		
-		double deltaDist = fabs([newLocation distanceFromLocation:oldLocation]);
-		if (deltaDist < MIN_DIST_CHANGE) {
-			deltaDist = 0;
+				
+		if (oldLocation == NULL) {
+			return;
 		}
 		
-		self.totalDistance += deltaDist;
-		self.currentSpeed = fabs(newLocation.speed);
-		self.avgSpeed = self.totalDistance / self.elapsedTime;
-		self.numPoints++;
+		double speed = fabs(newLocation.speed);
+		double deltaDist = fabs([newLocation distanceFromLocation:oldLocation]);
+		double newAvgSpeed = (self.totalDistance + deltaDist) / self.elapsedTime;
 		
-		[self.viewController updateRunDisplay];
+		if (deltaDist < MIN_DIST_CHANGE || deltaDist > MAX_DIST_CHANGE || speed > MAX_SPEED || newAvgSpeed > MAX_SPEED) {
+			NSLog(@"Ignoring invalid location change");
+		}
+		else {
+		
+			NSLog(@"Previous distance = %f", self.totalDistance);
+		
+			self.totalDistance += deltaDist;
+			self.currentSpeed = speed;
+			self.avgSpeed = newAvgSpeed;
+		
+			NSLog(@"Delta distance = %f", deltaDist);
+			NSLog(@"New distance = %f", self.totalDistance);
+		
+			[self.locationPoints addObject:newLocation];
+			self.numPoints++;
+		
+			[self.viewController updateRunDisplay];
+			
+		}
+		
 		[self updateMap:newLocation];
 	}
 	
@@ -191,6 +209,7 @@
 													delegate:self 
 													cancelButtonTitle:nil 
 													otherButtonTitles:nil];
+		[alert addButtonWithTitle:@"OK"];
 		[alert show];
 	}
 	else if (error == kCLErrorLocationUnknown) {

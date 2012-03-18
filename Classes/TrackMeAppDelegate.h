@@ -10,7 +10,10 @@
 #import <CoreLocation/CoreLocation.h>
 
 
-#define MIN_DIST_CHANGE		200
+#define MAP_RADIUS			1.0
+#define MIN_DIST_CHANGE		100
+#define MAX_DIST_CHANGE		1000
+#define MAX_SPEED			100
 #define DEFAULT_PRECISION	75
 #define DEFAULT_NUM_POINTS	1024
 #define TIMER_PERIOD		0.1
