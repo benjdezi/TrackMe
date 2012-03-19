@@ -5,13 +5,11 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleDisplayName</key>
-	<string>Track Me</string>
+	<string>${PRODUCT_NAME}</string>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIconFile</key>
 	<string>Icon.png</string>
-	<key>CFBundleShortVersionString</key>
-	<string></string>
 	<key>CFBundleIdentifier</key>
 	<string>com.labs.trackme</string>
 	<key>CFBundleInfoDictionaryVersion</key>

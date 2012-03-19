@@ -1,14 +1,16 @@
 //
-//  TrackMeViewController.m
+//  FirstViewController.m
 //  TrackMe
 //
-//  Created by Benjamin Dezile on 3/4/12.
-//  Copyright 2012 TrackMe. All rights reserved.
+//  Created by Benjamin Dezile on 3/19/12.
+//  Copyright 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "TrackMeViewController.h"
+#import "FirstViewController.h"
+#import <MapKit/MapKit.h>
 
-@implementation TrackMeViewController
+
+@implementation FirstViewController
 
 @synthesize delegate;
 @synthesize started;
@@ -18,7 +20,6 @@
 @synthesize curSpeedLabel;
 @synthesize startButton;
 @synthesize resetButton;
-@synthesize tabBar;
 @synthesize mapView;
 
 
@@ -57,7 +58,8 @@
 	[self.avgSpeedLabel setText:@"-"];
 	[self.curSpeedLabel setText:@"-"];
 	[self setStartButtonTitle:START_BUTTON_TEXT];
-	self.started = NO;[self setStartButtonTitle:START_BUTTON_TEXT];
+	self.started = NO;
+	[self setStartButtonTitle:START_BUTTON_TEXT];
 }
 
 
@@ -110,12 +112,10 @@
     [super viewDidLoad];
 	
 	self.delegate = (TrackMeAppDelegate*)[[UIApplication sharedApplication] delegate];
-	self.tabBar.delegate = self.delegate;
 	
 	[self reset];
 	
 }
-
 
 - (void)didReceiveMemoryWarning {
 	// Releases the view if it doesn't have a superview.
@@ -123,7 +123,6 @@
 	
 	// Release any cached data, images, etc that aren't in use.
 }
-
 
 - (void)viewDidUnload {
 	// Release any retained subviews of the main view.
@@ -138,7 +137,6 @@
 	[curSpeedLabel release];
 	[startButton release];
 	[resetButton release];
-	[tabBar release];
 	[mapView release];
     [super dealloc];
 }

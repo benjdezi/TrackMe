@@ -1,21 +1,24 @@
 //
-//  TrackMeViewController.h
+//  FirstViewController.h
 //  TrackMe
 //
-//  Created by Benjamin Dezile on 3/4/12.
-//  Copyright 2012 TrackMe. All rights reserved.
+//  Created by Benjamin Dezile on 3/19/12.
+//  Copyright 2012 __MyCompanyName__. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 #import "TrackMeAppDelegate.h"
 
+
 #define START_BUTTON_TEXT	@"Start"
 #define STOP_BUTTON_TEXT	@"Pause"
 #define RESUME_BUTTON_TEXT	@"Resume"
 
 
-@interface TrackMeViewController : UIViewController {
+@class TrackMeAppDelegate;
+
+@interface FirstViewController : UIViewController {
 
 	TrackMeAppDelegate* delegate;
 	
@@ -27,7 +30,6 @@
 	UILabel* curSpeedLabel;
 	UIButton* startButton;
 	UIButton* resetButton;
-	UITabBar* tabBar;
 	MKMapView* mapView;
 	
 }
@@ -48,8 +50,6 @@
 @property (nonatomic, retain) IBOutlet UILabel* curSpeedLabel;
 @property (nonatomic, retain) IBOutlet UIButton* startButton;
 @property (nonatomic, retain) IBOutlet UIButton* resetButton;
-@property (nonatomic, retain) IBOutlet UITabBar* tabBar;
 @property (nonatomic, retain) IBOutlet MKMapView* mapView;
 
 @end
-

@@ -2,18 +2,17 @@
 //  TrackMeAppDelegate.m
 //  TrackMe
 //
-//  Created by Benjamin Dezile on 3/4/12.
-//  Copyright 2012 TrackMe. All rights reserved.
+//  Created by Benjamin Dezile on 3/19/12.
+//  Copyright 2012 __MyCompanyName__. All rights reserved.
 //
 
 #import "TrackMeAppDelegate.h"
-#import "TrackMeViewController.h"
 #import <CoreLocation/CoreLocation.h>
+
 
 @implementation TrackMeAppDelegate
 
 @synthesize window;
-@synthesize mainViewController;
 @synthesize tabBarController;
 @synthesize locationManager;
 @synthesize totalDistance;
@@ -26,37 +25,14 @@
 
 
 #pragma mark -
-#pragma mark UITabBarDelegate methods
-
-- (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item {
-	NSString* value = item.title;
-	NSLog(@"Selected item %@", value);
-	if ([value isEqualToString:@"Stats"]) {
-		
-		// Display main view
-		// TODO
-		
-	} else if ([value isEqualToString:@"Settings"]) {
-		
-		// Display settings
-		// TODO
-		
-	} else if ([value isEqualToString:@"About"]) {
-		
-		// Display about info
-		// TODO
-		
-	}
-}
-
-
-#pragma mark -
 #pragma mark Application lifecycle
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
-	
-    // Add the view controller's view to the window and display.
-    [self.window addSubview:self.mainViewController.view];
+    
+    // Override point for customization after application launch.
+
+    // Add the tab bar controller's view to the window and display.
+    [self.window addSubview:tabBarController.view];
     [self.window makeKeyAndVisible];
 
 	// Initialize stats
@@ -74,9 +50,7 @@
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     /*
-     Sent when the application is about to move from active to inactive state. 
-	 This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or 
-	 when the user quits the application and it begins the transition to the background state.
+     Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
      Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
      */
 }
@@ -84,8 +58,7 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     /*
-     Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to 
-	 restore your application to its current state in case it is terminated later. 
+     Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
      If your application supports background execution, called instead of applicationWillTerminate: when the user quits.
      */
 }
@@ -100,8 +73,7 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     /*
-     Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously 
-	 in the background, optionally refresh the user interface.
+     Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
      */
 }
 
@@ -118,7 +90,7 @@
 #pragma mark Custom methods
 
 - (void)reset {
-
+	
 	self.elapsedTime = 0;
 	self.totalDistance = 0;
 	self.avgSpeed = 0;
@@ -126,13 +98,15 @@
 	self.numPoints = 0;
 	
 	// Clear map annotations
-	if (self.mainViewController.mapView.annotations != NULL) {
-		for (id annotation in self.mainViewController.mapView.annotations) {		
-			if (![annotation isKindOfClass:[MKUserLocation class]]){
-				[self.mainViewController.mapView removeAnnotation:annotation];
-			}
-		}
-	}
+	int index = self.tabBarController.selectedIndex;
+	NSLog(@"Selected tab index = %d", index);
+	//if (self.mainViewController.mapView.annotations != NULL) {
+	//	for (id annotation in self.mainViewController.mapView.annotations) {		
+	//		if (![annotation isKindOfClass:[MKUserLocation class]]){
+	//			[self.mainViewController.mapView removeAnnotation:annotation];
+	//		}
+	//	}
+	//}
 	
 	NSLog(@"Reset stats values");
 	
@@ -164,126 +138,55 @@
 	int ms = (delta_milli - (3600 * 1000) * hours - (60 * 1000) * minutes - 1000 * seconds) / 100;
 	
 	NSString* timeString = [NSString stringWithFormat:@"%.2d:%.2d:%.2d.%d", hours, minutes, seconds, ms];
+	NSLog(@"Time = %@", timeString);
 	
-	[self.mainViewController.runTimeLabel setText:timeString];
+	//[self.mainViewController.runTimeLabel setText:timeString];
 	
 }
 
 
 -(void)updateMap:(CLLocation*)oldLocation newLocation:(CLLocation*)location {
 	
-	double scalingFactor = ABS(cos(2 * M_PI * location.coordinate.latitude / 360.0));
+	//double scalingFactor = ABS(cos(2 * M_PI * location.coordinate.latitude / 360.0));
 	
-	MKCoordinateSpan span;
-	span.latitudeDelta = MAP_RADIUS / 69.0;
-	span.longitudeDelta = MAP_RADIUS / (scalingFactor * 69.0);
+	//MKCoordinateSpan span;
+	//span.latitudeDelta = MAP_RADIUS / 69.0;
+	//span.longitudeDelta = MAP_RADIUS / (scalingFactor * 69.0);
 	
-	MKCoordinateRegion region;
-	region.span = span;
-	region.center = location.coordinate;
+	//MKCoordinateRegion region;
+	//region.span = span;
+	//region.center = location.coordinate;
 	
-	if (oldLocation != NULL) {
-		double deltaDist = fabs([location distanceFromLocation:oldLocation]);
-		if (deltaDist > MIN_DIST_CHANGE || self.numPoints == 1) {
-			MKPointAnnotation* annotation = [MKPointAnnotation alloc];
-			annotation.coordinate = oldLocation.coordinate;
-			[self.mainViewController.mapView addAnnotation:annotation];
-		}
-	}
+	//if (oldLocation != NULL) {
+	//	double deltaDist = fabs([location distanceFromLocation:oldLocation]);
+	//	if (deltaDist > MIN_DIST_CHANGE || self.numPoints == 1) {
+	//		MKPointAnnotation* annotation = [MKPointAnnotation alloc];
+	//		annotation.coordinate = oldLocation.coordinate;
+	//		[self.mainViewController.mapView addAnnotation:annotation];
+	//	}
+	//}
 	
-	[self.mainViewController.mapView setRegion:region];
-	self.mainViewController.mapView.showsUserLocation = YES;
+	//[self.mainViewController.mapView setRegion:region];
+	//self.mainViewController.mapView.showsUserLocation = YES;
 	NSLog(@"Updated map");
 	
 }
 
 
 #pragma mark -
-#pragma mark CLLocationManager methods
+#pragma mark UITabBarControllerDelegate methods
 
-- (void)locationManager:(CLLocationManager*)manager
-		didUpdateToLocation:(CLLocation*)newLocation fromLocation:(CLLocation*)oldLocation {
-	
-	if (newLocation != oldLocation) {
-		
-		NSLog(@"Moved from %@ to %@", oldLocation, newLocation);
-				
-		if (oldLocation == NULL) {
-			
-			// Display initial location
-			[self updateMap:NULL newLocation:newLocation];
-			
-			return;
-		}
-		
-		double speed = fabs(newLocation.speed);
-		double deltaDist = fabs([newLocation distanceFromLocation:oldLocation]);
-		double newAvgSpeed = (self.totalDistance + deltaDist) / self.elapsedTime;
-		double accuracy = newLocation.horizontalAccuracy;
-		
-		if (accuracy < 0 ||
-			deltaDist < accuracy || 
-			deltaDist < MIN_DIST_CHANGE || 
-			deltaDist > MAX_DIST_CHANGE || 
-			speed > MAX_SPEED || 
-			newAvgSpeed > MAX_SPEED) {
-			NSLog(@"Ignoring invalid location change");
-		}
-		else {
-		
-			NSLog(@"Previous distance = %f", self.totalDistance);
-		
-			if (self.totalDistance < 0 || self.numPoints == 0) {
-				self.totalDistance = 0;
-			}
-			
-			self.totalDistance += deltaDist;
-			self.currentSpeed = speed;
-			self.avgSpeed = newAvgSpeed;
-		
-			NSLog(@"Delta distance = %f", deltaDist);
-			NSLog(@"New distance = %f", self.totalDistance);
-		
-			// Add new location to path
-			[self.locationPoints addObject:newLocation];
-			self.numPoints++;
-		
-			// Update stats display
-			[self.mainViewController updateRunDisplay];
-			
-			// Update map view
-			[self updateMap:oldLocation newLocation:newLocation];
-			
-		}
-		
-	}
-	
+/*
+// Optional UITabBarControllerDelegate method.
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
 }
+*/
 
-
--(void)locationManager:(CLLocationManager*)manager 
-	  didFailWithError:(NSError*)error {
-
-	NSLog(@"Core Location error: %@", error);
-	
-	if (error.code == kCLErrorDenied) {
-		// User denied access to location
-		[manager stopUpdatingLocation];
-		UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Oops!" 
-													message:@"This app cannot work without location tracking.\nPlease enable it." 
-													delegate:self 
-													cancelButtonTitle:nil 
-													otherButtonTitles:nil];
-		[alert addButtonWithTitle:@"OK"];
-		[alert show];
-	}
-	else if (error == kCLErrorLocationUnknown) {
-		// Failed to locate user, ignore and retry
-		return;
-	}
-
-	
+/*
+// Optional UITabBarControllerDelegate method.
+- (void)tabBarController:(UITabBarController *)tabBarController didEndCustomizingViewControllers:(NSArray *)viewControllers changed:(BOOL)changed {
 }
+*/
 
 
 #pragma mark -
@@ -297,12 +200,10 @@
 
 
 - (void)dealloc {
-	[locationManager release];
-    [mainViewController release];
-	[tabBarController release];
+    [tabBarController release];
     [window release];
     [super dealloc];
 }
 
-
 @end
+
