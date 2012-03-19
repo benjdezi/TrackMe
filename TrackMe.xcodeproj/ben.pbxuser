@@ -10,9 +10,9 @@
 	};
 	1D3623250D0F684500981E51 /* TrackMeAppDelegate.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1099, 4342}}";
-			sepNavSelRange = "{276, 0}";
-			sepNavVisRange = "{277, 736}";
+			sepNavIntBoundsRect = "{{0, 0}, {1099, 4173}}";
+			sepNavSelRange = "{1186, 0}";
+			sepNavVisRange = "{833, 832}";
 			sepNavWindowFrame = "{{15, 69}, {1220, 804}}";
 		};
 	};
@@ -34,7 +34,7 @@
 			sepNavFolds = "{\n    c =     (\n                {\n            r = \"{522, 441}\";\n            s = 0;\n        },\n                {\n            r = \"{981, 353}\";\n            s = 0;\n        },\n                {\n            r = \"{1382, 66}\";\n            s = 0;\n        },\n                {\n            r = \"{1477, 787}\";\n            s = 0;\n        },\n                {\n            r = \"{2645, 155}\";\n            s = 0;\n        },\n                {\n            r = \"{2827, 83}\";\n            s = 0;\n        },\n                {\n            r = \"{2931, 212}\";\n            s = 0;\n        }\n    );\n    r = \"{0, 3151}\";\n    s = 0;\n}";
 			sepNavIntBoundsRect = "{{0, 0}, {1099, 845}}";
 			sepNavSelRange = "{949, 0}";
-			sepNavVisRange = "{525, 536}";
+			sepNavVisRange = "{525, 531}";
 			sepNavWindowFrame = "{{15, 69}, {1220, 804}}";
 		};
 	};
@@ -99,8 +99,8 @@
 					PBXFileDataSource_Target_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 353845634;
-			PBXWorkspaceStateSaveDate = 353845634;
+			PBXPerProjectTemplateStateSaveDate = 353847923;
+			PBXWorkspaceStateSaveDate = 353847923;
 		};
 		perUserProjectItems = {
 			B5368BA215171B2300C50187 = B5368BA215171B2300C50187 /* PBXBookmark */;
@@ -111,14 +111,12 @@
 			B5368CDB15173D6300C50187 = B5368CDB15173D6300C50187 /* PBXTextBookmark */;
 			B5368CDC15173D6300C50187 = B5368CDC15173D6300C50187 /* PBXTextBookmark */;
 			B5368CF1151740E000C50187 = B5368CF1151740E000C50187 /* PBXTextBookmark */;
-			B5368CF2151740E000C50187 = B5368CF2151740E000C50187 /* PBXTextBookmark */;
 			B5368CF3151740E000C50187 = B5368CF3151740E000C50187 /* PBXTextBookmark */;
 			B5368CF4151740E000C50187 = B5368CF4151740E000C50187 /* PlistBookmark */;
-			B5368D091517418500C50187 /* PBXTextBookmark */ = B5368D091517418500C50187 /* PBXTextBookmark */;
-			B5368D0C1517418500C50187 /* PlistBookmark */ = B5368D0C1517418500C50187 /* PlistBookmark */;
+			B5368D0E1517421800C50187 = B5368D0E1517421800C50187 /* PBXTextBookmark */;
+			B5368D0F1517421800C50187 = B5368D0F1517421800C50187 /* PlistBookmark */;
 			B5F4BB131515E31400F511B2 = B5F4BB131515E31400F511B2 /* PlistBookmark */;
 			B5F4BBF01515F7EA00F511B2 = B5F4BBF01515F7EA00F511B2 /* PBXTextBookmark */;
-			B5F4BC081515FACF00F511B2 = B5F4BC081515FACF00F511B2 /* PlistBookmark */;
 		};
 		sourceControlManager = B5AE700F150430DE00981FA7 /* Source Control */;
 		userBuildSettings = {
@@ -193,16 +191,6 @@
 		vrLen = 1087;
 		vrLoc = 842;
 	};
-	B5368CF2151740E000C50187 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 1D3623250D0F684500981E51 /* TrackMeAppDelegate.m */;
-		name = "TrackMeAppDelegate.m: 58";
-		rLen = 0;
-		rLoc = 1182;
-		rType = 0;
-		vrLen = 1206;
-		vrLoc = 1002;
-	};
 	B5368CF3151740E000C50187 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 1D3623250D0F684500981E51 /* TrackMeAppDelegate.m */;
@@ -224,17 +212,17 @@
 		rLen = 0;
 		rLoc = 9223372036854775808;
 	};
-	B5368D091517418500C50187 /* PBXTextBookmark */ = {
+	B5368D0E1517421800C50187 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 1D3623250D0F684500981E51 /* TrackMeAppDelegate.m */;
-		name = "TrackMeAppDelegate.m: 13";
+		name = "TrackMeAppDelegate.m: 58";
 		rLen = 0;
-		rLoc = 276;
+		rLoc = 1186;
 		rType = 0;
-		vrLen = 736;
-		vrLoc = 277;
+		vrLen = 835;
+		vrLoc = 833;
 	};
-	B5368D0C1517418500C50187 /* PlistBookmark */ = {
+	B5368D0F1517421800C50187 /* PlistBookmark */ = {
 		isa = PlistBookmark;
 		fRef = 8D1107310486CEB800E47090 /* TrackMe-Info.plist */;
 		fallbackIsa = PBXBookmark;
@@ -243,7 +231,7 @@
 		);
 		name = "/Users/ben/Documents/labs/iphone/TrackMe/TrackMe-Info.plist";
 		rLen = 0;
-		rLoc = 9223372036854775807;
+		rLoc = 9223372036854775808;
 	};
 	B5AE700B150430BF00981FA7 /* TrackMe */ = {
 		isa = PBXExecutable;
@@ -319,16 +307,5 @@
 		name = CLLocation.h;
 		path = /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CLLocation.h;
 		sourceTree = "<absolute>";
-	};
-	B5F4BC081515FACF00F511B2 /* PlistBookmark */ = {
-		isa = PlistBookmark;
-		fRef = 8D1107310486CEB800E47090 /* TrackMe-Info.plist */;
-		fallbackIsa = PBXBookmark;
-		isK = 0;
-		kPath = (
-		);
-		name = "/Users/ben/Documents/labs/iphone/TrackMe/TrackMe-Info.plist";
-		rLen = 0;
-		rLoc = 9223372036854775808;
 	};
 }
