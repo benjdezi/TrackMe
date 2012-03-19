@@ -106,9 +106,12 @@
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
+	
     [super viewDidLoad];
 	
-	self.delegate = (TrackMeAppDelegate*) [[UIApplication sharedApplication] delegate];
+	self.delegate = (TrackMeAppDelegate*)[[UIApplication sharedApplication] delegate];
+	self.tabBar.delegate = self.delegate;
+	
 	[self reset];
 	
 }

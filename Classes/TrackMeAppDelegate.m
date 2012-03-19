@@ -13,7 +13,9 @@
 @implementation TrackMeAppDelegate
 
 @synthesize window;
-@synthesize viewController;
+@synthesize mainViewController;
+@synthesize settingsView;
+@synthesize aboutView;
 @synthesize locationManager;
 @synthesize totalDistance;
 @synthesize avgSpeed;
@@ -25,12 +27,27 @@
 
 
 #pragma mark -
+#pragma mark UITabBarDelegate methods
+
+- (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item {
+	NSString* value = item.badgeValue;
+	if (value == @"Stats") {
+		
+	} else if (value == @"Settings") {
+		
+	} else if (value == @"About") {
+		
+	}
+}
+
+
+#pragma mark -
 #pragma mark Application lifecycle
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
-
+		
     // Add the view controller's view to the window and display.
-    [self.window addSubview:viewController.view];
+    [self.window addSubview:self.mainViewController.view];
     [self.window makeKeyAndVisible];
 
 	// Initialize stats
@@ -96,10 +113,10 @@
 	self.numPoints = 0;
 	
 	// Clear map annotations
-	if (self.viewController.mapView.annotations != NULL) {
-		for (id annotation in self.viewController.mapView.annotations) {		
+	if (self.mainViewController.mapView.annotations != NULL) {
+		for (id annotation in self.mainViewController.mapView.annotations) {		
 			if (![annotation isKindOfClass:[MKUserLocation class]]){
-				[self.viewController.mapView removeAnnotation:annotation];
+				[self.mainViewController.mapView removeAnnotation:annotation];
 			}
 		}
 	}
@@ -135,7 +152,7 @@
 	
 	NSString* timeString = [NSString stringWithFormat:@"%.2d:%.2d:%.2d.%d", hours, minutes, seconds, ms];
 	
-	[self.viewController.runTimeLabel setText:timeString];
+	[self.mainViewController.runTimeLabel setText:timeString];
 	
 }
 
@@ -157,12 +174,12 @@
 		if (deltaDist > MIN_DIST_CHANGE || self.numPoints == 1) {
 			MKPointAnnotation* annotation = [MKPointAnnotation alloc];
 			annotation.coordinate = oldLocation.coordinate;
-			[self.viewController.mapView addAnnotation:annotation];
+			[self.mainViewController.mapView addAnnotation:annotation];
 		}
 	}
 	
-	[self.viewController.mapView setRegion:region];
-	self.viewController.mapView.showsUserLocation = YES;
+	[self.mainViewController.mapView setRegion:region];
+	self.mainViewController.mapView.showsUserLocation = YES;
 	NSLog(@"Updated map");
 	
 }
@@ -219,7 +236,7 @@
 			self.numPoints++;
 		
 			// Update stats display
-			[self.viewController updateRunDisplay];
+			[self.mainViewController updateRunDisplay];
 			
 			// Update map view
 			[self updateMap:oldLocation newLocation:newLocation];
@@ -268,7 +285,7 @@
 
 - (void)dealloc {
 	[locationManager release];
-    [viewController release];
+    [mainViewController release];
     [window release];
     [super dealloc];
 }
