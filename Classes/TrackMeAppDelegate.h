@@ -27,8 +27,7 @@
 
     UIWindow* window;
     TrackMeViewController* mainViewController;
-	UIView* setttingsView;
-	UIView* aboutView;
+	UITabBarController* tabBarController;
 	
 	CLLocationManager* locationManager;
 	NSTimer* timer;
@@ -49,8 +48,7 @@
 
 @property (nonatomic, retain) IBOutlet UIWindow* window;
 @property (nonatomic, retain) IBOutlet TrackMeViewController* mainViewController;
-@property (nonatomic, retain) IBOutlet UIView* settingsView;
-@property (nonatomic, retain) IBOutlet UIView* aboutView;
+@property (nonatomic, retain) IBOutlet UITabBarController* tabBarController;
 @property (retain) CLLocationManager* locationManager;
 @property (retain) NSMutableArray* locationPoints;
 @property (retain) NSTimer* timer;
