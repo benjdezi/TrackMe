@@ -3,21 +3,27 @@
 //  TrackMe
 //
 //  Created by Benjamin Dezile on 3/19/12.
-//  Copyright 2012 __MyCompanyName__. All rights reserved.
+//  Copyright 2012 TrackMe. All rights reserved.
 //
 
 #import "TrackMeAppDelegate.h"
+#import "FirstViewController.h"
 #import <CoreLocation/CoreLocation.h>
+#import <MapKit/MapKit.h>
 
 
 @implementation TrackMeAppDelegate
 
+@class FirstViewController;
+
 @synthesize window;
 @synthesize tabBarController;
+@synthesize firstController;
 @synthesize locationManager;
 @synthesize totalDistance;
 @synthesize avgSpeed;
 @synthesize currentSpeed;
+@synthesize altitude;
 @synthesize locationPoints;
 @synthesize numPoints;
 @synthesize elapsedTime;
@@ -35,6 +41,9 @@
     [self.window addSubview:tabBarController.view];
     [self.window makeKeyAndVisible];
 
+	// Store controller references
+	self.firstController = (FirstViewController*)[self.tabBarController.viewControllers objectAtIndex:0];
+	
 	// Initialize stats
 	[self reset];
 	
@@ -94,19 +103,18 @@
 	self.elapsedTime = 0;
 	self.totalDistance = 0;
 	self.avgSpeed = 0;
+	self.altitude = 0;
 	self.locationPoints = [[NSMutableArray alloc] initWithCapacity:DEFAULT_NUM_POINTS];
 	self.numPoints = 0;
 	
 	// Clear map annotations
-	int index = self.tabBarController.selectedIndex;
-	NSLog(@"Selected tab index = %d", index);
-	//if (self.mainViewController.mapView.annotations != NULL) {
-	//	for (id annotation in self.mainViewController.mapView.annotations) {		
-	//		if (![annotation isKindOfClass:[MKUserLocation class]]){
-	//			[self.mainViewController.mapView removeAnnotation:annotation];
-	//		}
-	//	}
-	//}
+	if (self.firstController.mapView.annotations != NULL) {
+		for (id annotation in self.firstController.mapView.annotations) {		
+			if (![annotation isKindOfClass:[MKUserLocation class]]){
+				[self.firstController.mapView removeAnnotation:annotation];
+			}
+		}
+	}
 	
 	NSLog(@"Reset stats values");
 	
@@ -115,7 +123,11 @@
 
 -(void)start {
 	[self.locationManager startUpdatingLocation];
-	self.timer = [NSTimer scheduledTimerWithTimeInterval:TIMER_PERIOD target:self selector:@selector(updateTimer) userInfo:nil repeats:YES];
+	self.timer = [NSTimer scheduledTimerWithTimeInterval:TIMER_PERIOD 
+												  target:self 
+												selector:@selector(updateTimer) 
+												userInfo:nil 
+												 repeats:YES];
 	NSLog(@"Started tracking");
 }
 
@@ -138,37 +150,102 @@
 	int ms = (delta_milli - (3600 * 1000) * hours - (60 * 1000) * minutes - 1000 * seconds) / 100;
 	
 	NSString* timeString = [NSString stringWithFormat:@"%.2d:%.2d:%.2d.%d", hours, minutes, seconds, ms];
-	NSLog(@"Time = %@", timeString);
 	
-	//[self.mainViewController.runTimeLabel setText:timeString];
+	[self.firstController.runTimeLabel setText:timeString];
 	
 }
 
 
 -(void)updateMap:(CLLocation*)oldLocation newLocation:(CLLocation*)location {
 	
-	//double scalingFactor = ABS(cos(2 * M_PI * location.coordinate.latitude / 360.0));
+	double scalingFactor = ABS(cos(2 * M_PI * location.coordinate.latitude / 360.0));
 	
-	//MKCoordinateSpan span;
-	//span.latitudeDelta = MAP_RADIUS / 69.0;
-	//span.longitudeDelta = MAP_RADIUS / (scalingFactor * 69.0);
+	MKCoordinateSpan span;
+	span.latitudeDelta = MAP_RADIUS / 69.0;
+	span.longitudeDelta = MAP_RADIUS / (scalingFactor * 69.0);
 	
-	//MKCoordinateRegion region;
-	//region.span = span;
-	//region.center = location.coordinate;
+	MKCoordinateRegion region;
+	region.span = span;
+	region.center = location.coordinate;
 	
-	//if (oldLocation != NULL) {
-	//	double deltaDist = fabs([location distanceFromLocation:oldLocation]);
-	//	if (deltaDist > MIN_DIST_CHANGE || self.numPoints == 1) {
-	//		MKPointAnnotation* annotation = [MKPointAnnotation alloc];
-	//		annotation.coordinate = oldLocation.coordinate;
-	//		[self.mainViewController.mapView addAnnotation:annotation];
-	//	}
-	//}
+	if (oldLocation != NULL) {
+		double deltaDist = fabs([location distanceFromLocation:oldLocation]);
+		if (deltaDist > MIN_DIST_CHANGE || self.numPoints == 1) {
+			MKPointAnnotation* annotation = [MKPointAnnotation alloc];
+			annotation.coordinate = oldLocation.coordinate;
+			[self.firstController.mapView addAnnotation:annotation];
+		}
+	}
 	
-	//[self.mainViewController.mapView setRegion:region];
-	//self.mainViewController.mapView.showsUserLocation = YES;
+	[self.firstController.mapView setRegion:region];
+	self.firstController.mapView.showsUserLocation = YES;
 	NSLog(@"Updated map");
+	
+}
+
+
+#pragma mark -
+#pragma mark CLLocationManager methods
+
+- (void)locationManager:(CLLocationManager*)manager
+	didUpdateToLocation:(CLLocation*)newLocation 
+		   fromLocation:(CLLocation*)oldLocation {
+	
+	if (newLocation != oldLocation) {
+		
+		NSLog(@"Moved from %@ to %@", oldLocation, newLocation);
+		
+		if (oldLocation == NULL && self.numPoints == 0) {
+			
+			// Display initial location
+			[self updateMap:NULL newLocation:newLocation];
+			
+			return;
+		}
+		
+		double speed = fabs(newLocation.speed);
+		double deltaDist = fabs([newLocation distanceFromLocation:oldLocation]);
+		double newAvgSpeed = (self.totalDistance + deltaDist) / self.elapsedTime;
+		double accuracy = newLocation.horizontalAccuracy;
+		double alt = newLocation.altitude;
+		
+		if (accuracy < 0 ||
+			deltaDist < accuracy || 
+			deltaDist < MIN_DIST_CHANGE || 
+			deltaDist > MAX_DIST_CHANGE || 
+			speed > MAX_SPEED || 
+			newAvgSpeed > MAX_SPEED) {
+			NSLog(@"Ignoring invalid location change");
+		}
+		else {
+			
+			NSLog(@"Previous distance = %f", self.totalDistance);
+			
+			if (self.totalDistance < 0 || self.numPoints == 0) {
+				self.totalDistance = 0;
+			}
+			
+			self.totalDistance += deltaDist;
+			self.currentSpeed = speed;
+			self.avgSpeed = newAvgSpeed;
+			self.altitude = alt;
+			
+			NSLog(@"Delta distance = %f", deltaDist);
+			NSLog(@"New distance = %f", self.totalDistance);
+			
+			// Add new location to path
+			[self.locationPoints addObject:newLocation];
+			self.numPoints++;
+			
+			// Update stats display
+			[self.firstController updateRunDisplay];
+			
+			// Update map view
+			[self updateMap:oldLocation newLocation:newLocation];
+			
+		}
+		
+	}
 	
 }
 
@@ -178,13 +255,16 @@
 
 /*
 // Optional UITabBarControllerDelegate method.
-- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
+- (void)tabBarController:(UITabBarController *)tabBarController 
+	didSelectViewController:(UIViewController *)viewController {
 }
 */
 
 /*
 // Optional UITabBarControllerDelegate method.
-- (void)tabBarController:(UITabBarController *)tabBarController didEndCustomizingViewControllers:(NSArray *)viewControllers changed:(BOOL)changed {
+- (void)tabBarController:(UITabBarController *)tabBarController 
+	didEndCustomizingViewControllers:(NSArray *)viewControllers 
+	changed:(BOOL)changed {
 }
 */
 
@@ -194,8 +274,9 @@
 
 - (void)applicationDidReceiveMemoryWarning:(UIApplication *)application {
     /*
-     Free up as much memory as possible by purging cached data objects that can be recreated (or reloaded from disk) later.
-     */
+     Free up as much memory as possible by purging cached data objects 
+	 that can be recreated (or reloaded from disk) later.
+	*/
 }
 
 

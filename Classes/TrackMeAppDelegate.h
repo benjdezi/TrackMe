@@ -3,7 +3,7 @@
 //  TrackMe
 //
 //  Created by Benjamin Dezile on 3/19/12.
-//  Copyright 2012 __MyCompanyName__. All rights reserved.
+//  Copyright 2012 TrackMe. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -21,11 +21,13 @@
 #define TIMER_PERIOD		0.1				// Timer refresh period
 #define DEFAULT_TIMER_TEXT	@"00:00:00.0"	// Inital display for the timer 
 
+@class FirstViewController;
 
 @interface TrackMeAppDelegate : NSObject <UIApplicationDelegate, CLLocationManagerDelegate, UITabBarControllerDelegate> {
  
 	UIWindow* window;
     UITabBarController* tabBarController;
+	FirstViewController* firstController;
 	
 	CLLocationManager* locationManager;
 	NSTimer* timer;
@@ -34,6 +36,7 @@
 	double totalDistance;
 	double avgSpeed;
 	double currentSpeed;
+	double altitude;
 	int numPoints;
 	double elapsedTime;
 	
@@ -47,6 +50,7 @@
 
 @property (nonatomic, retain) IBOutlet UIWindow* window;
 @property (nonatomic, retain) IBOutlet UITabBarController* tabBarController;
+@property (nonatomic, retain) FirstViewController* firstController;
 
 @property (retain) CLLocationManager* locationManager;
 @property (retain) NSMutableArray* locationPoints;
@@ -54,6 +58,7 @@
 @property double totalDistance;
 @property double avgSpeed;
 @property double currentSpeed;
+@property double altitude;
 @property int numPoints;
 @property double elapsedTime;
 

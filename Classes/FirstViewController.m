@@ -3,12 +3,11 @@
 //  TrackMe
 //
 //  Created by Benjamin Dezile on 3/19/12.
-//  Copyright 2012 __MyCompanyName__. All rights reserved.
+//  Copyright 2012 TrackMe. All rights reserved.
 //
 
 #import "FirstViewController.h"
 #import <MapKit/MapKit.h>
-
 
 @implementation FirstViewController
 
@@ -18,6 +17,7 @@
 @synthesize distanceLabel;
 @synthesize avgSpeedLabel;
 @synthesize curSpeedLabel;
+@synthesize altitudeLabel;
 @synthesize startButton;
 @synthesize resetButton;
 @synthesize mapView;
@@ -55,6 +55,7 @@
 	[self.delegate reset];
 	[self.runTimeLabel setText:DEFAULT_TIMER_TEXT];
 	[self.distanceLabel setText:@"0 m"];
+	[self.altitudeLabel setText:@"0 m"];
 	[self.avgSpeedLabel setText:@"-"];
 	[self.curSpeedLabel setText:@"-"];
 	[self setStartButtonTitle:START_BUTTON_TEXT];
@@ -79,6 +80,9 @@
 		dist = [NSString stringWithFormat:@"%.1f km", self.delegate.totalDistance / 1000];
 	}
 	
+	// Altitude
+	NSString* alt = [NSString stringWithFormat:@"%d m", self.delegate.altitude];
+	
 	// Average speed
 	NSString* avgSpeed = nil;
 	if (self.delegate.avgSpeed < 1) {
@@ -98,8 +102,10 @@
 	}
 	
 	[self.distanceLabel setText:dist];
+	[self.altitudeLabel setText:alt];
 	[self.avgSpeedLabel setText:avgSpeed];
 	[self.curSpeedLabel setText:curSpeed];
+	
 }
 
 
