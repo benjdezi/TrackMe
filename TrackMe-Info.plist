@@ -26,5 +26,7 @@
 	<true/>
 	<key>NSMainNibFile</key>
 	<string>MainWindow</string>
+	<key>CFBundleShortVersionString</key>
+	<string></string>
 </dict>
 </plist>
