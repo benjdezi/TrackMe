@@ -29,14 +29,14 @@
 -(void)startOrStop {
 	if (self.started == NO) {
 		// Start new run
-		NSLog(@"Starting new run");
+		NSLog(@"Starting or resuming run");
 		self.started = YES;
 		[self setStartButtonTitle:STOP_BUTTON_TEXT];
 		[self.delegate start];
 	}
 	else {
 		// Stop current run
-		NSLog(@"Stopping current run");
+		NSLog(@"Pausing current run");
 		self.started = NO;
 		if (self.delegate.elapsedTime > 0) {
 			[self setStartButtonTitle:RESUME_BUTTON_TEXT];
@@ -72,24 +72,18 @@
 -(void)updateRunDisplay {
 	
 	// Total distance formatting
-	NSString* dist = nil;
-	if (self.delegate.totalDistance < 1000) {
-		dist = [NSString stringWithFormat:@"%d m", self.delegate.totalDistance];
-	}
-	else {
-		dist = [NSString stringWithFormat:@"%.1f km", self.delegate.totalDistance / 1000];
-	}
+	NSString* dist = [self.delegate formatDistance:self.delegate.totalDistance];
 	
 	// Altitude
-	NSString* alt = [NSString stringWithFormat:@"%d m", self.delegate.altitude];
+	NSString* alt = [self.delegate formatDistanceBasic:self.delegate.altitude];
 	
 	// Average speed
-	NSString* avgSpeed = nil;
+	NSString* avgSpeed = NULL;
 	if (self.delegate.avgSpeed < 1) {
 		avgSpeed = @"-";
 	}
 	else {
-		avgSpeed = [NSString stringWithFormat:@"%.1f km/h", self.delegate.avgSpeed];
+		avgSpeed = [self.delegate formatSpeed:self.delegate.avgSpeed];
 	}
 	
 	// Current speed
@@ -98,7 +92,7 @@
 		curSpeed = @"-";
 	}
 	else {
-		curSpeed = [NSString stringWithFormat:@"%.1f km/h", self.delegate.currentSpeed];
+		curSpeed = [self.delegate formatSpeed:self.delegate.currentSpeed];
 	}
 	
 	[self.distanceLabel setText:dist];
@@ -112,7 +106,6 @@
 #pragma mark -
 #pragma mark ViewController protocol
 
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
 	
     [super viewDidLoad];
@@ -134,7 +127,6 @@
 	// Release any retained subviews of the main view.
 	// e.g. self.myOutlet = nil;
 }
-
 
 - (void)dealloc {
 	[runTimeLabel release];

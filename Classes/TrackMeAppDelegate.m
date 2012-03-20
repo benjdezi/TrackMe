@@ -8,17 +8,17 @@
 
 #import "TrackMeAppDelegate.h"
 #import "FirstViewController.h"
+#import "SecondViewController.h"
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
 
 
 @implementation TrackMeAppDelegate
 
-@class FirstViewController;
-
 @synthesize window;
 @synthesize tabBarController;
 @synthesize firstController;
+@synthesize secondController;
 @synthesize locationManager;
 @synthesize totalDistance;
 @synthesize avgSpeed;
@@ -27,6 +27,8 @@
 @synthesize locationPoints;
 @synthesize elapsedTime;
 @synthesize timer;
+@synthesize isMetric;
+@synthesize sensitivity;
 
 
 #pragma mark -
@@ -34,14 +36,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
     
-    // Override point for customization after application launch.
-
     // Add the tab bar controller's view to the window and display.
     [self.window addSubview:tabBarController.view];
     [self.window makeKeyAndVisible];
 
 	// Store controller references
 	self.firstController = (FirstViewController*)[self.tabBarController.viewControllers objectAtIndex:0];
+	self.secondController = (SecondViewController*)[self.tabBarController.viewControllers objectAtIndex:1];
 	
 	// Initialize stats
 	[self reset];
@@ -51,6 +52,13 @@
 	self.locationManager.delegate = self;
 	self.locationManager.distanceFilter = MIN_DIST_CHANGE;
 	self.locationManager.desiredAccuracy = DEFAULT_PRECISION;
+	
+	// Tab Bar
+	self.tabBarController.delegate = self;
+	
+	// Initialize settings
+	self.isMetric = YES;
+	self.sensitivity = 0.5;
 	
     return YES;
 }
@@ -196,6 +204,66 @@
 }
 
 
+-(double)updateSensitivity {
+	double sensitivityRatio = [self.secondController.sensitivitySlider value];
+	int range = MAX_DIST_CHANGE - MIN_DIST_CHANGE;
+	self.sensitivity = MIN_DIST_CHANGE + range * sensitivityRatio;
+	NSLog(@"Changed sensitivity to %f", self.sensitivity);
+	return self.sensitivity;
+}
+
+
+-(BOOL)updateUnitSystem {
+	self.isMetric = [self.secondController.metricSwitch isOn];
+	NSLog(@"Is metric = %d", self.isMetric);
+	return self.isMetric;
+}
+
+
+#pragma mark -
+#pragma mark Helper methods
+
+-(NSString*)formatDistance:(double)distance {
+	return [self _formatDistance:distance isBasic:NO];
+}
+
+
+-(NSString*)formatDistanceBasic:(double)distance {
+	return [self _formatDistance:distance isBasic:YES];
+}
+
+
+-(NSString*)_formatDistance:(double)distance isBasic:(BOOL)basic {
+	if (self.isMetric == YES) {
+		if (distance < 1000 || basic == YES) {
+			// Meters
+			return [NSString stringWithFormat:@"%d m", (int)distance];
+		} else {
+			// Kilometers
+			return [NSString stringWithFormat:@".2f km", distance / 1000.0];
+		}
+	} else {
+		if (distance < (MILE_TO_YARD * 0.25) || basic == YES) {
+			// Yards
+			return [NSString stringWithFormat:@"%d yards", (int)(distance / YARD_TO_METER)];
+		} else {
+			// Miles
+			double value = (distance / YARD_TO_METER) / (MILE_TO_YARD * 1.0);
+			return [NSString stringWithFormat:@"%.2f mile%@", value, value > 1 ? @"s" : @""];
+		}
+	}
+}
+
+
+-(NSString*)formatSpeed:(double)speed {
+	if (self.isMetric == YES) {
+		return [NSString stringWithFormat:@"%.1f km/h", (speed / 1000.0) * 3600.0];
+	} else {
+		return [NSString stringWithFormat:@"%.1f mph", ((speed / 1000.0) / MILE_TO_KM) * 3600.0];
+	}
+}
+
+
 #pragma mark -
 #pragma mark CLLocationManager methods
 
@@ -207,7 +275,7 @@
 		
 		NSLog(@"Moved from %@ to %@", oldLocation, newLocation);
 		
-		if (oldLocation == NULL) {
+		if (oldLocation == NULL || [self.locationPoints count] == 0) {
 			
 			// Display initial location
 			[self updateMap:NULL newLocation:newLocation];
@@ -221,10 +289,12 @@
 		double accuracy = newLocation.horizontalAccuracy;
 		double alt = newLocation.altitude;
 		
+		NSLog(@"Change in position: %f meters", (int)deltaDist);
+		
 		if (accuracy < 0 ||
 			deltaDist < accuracy || 
-			deltaDist < MIN_DIST_CHANGE || 
-			deltaDist > MAX_DIST_CHANGE || 
+			deltaDist < self.sensitivity || 
+			deltaDist > 10 * self.sensitivity || 
 			speed > MAX_SPEED || 
 			newAvgSpeed > MAX_SPEED) {
 			NSLog(@"Ignoring invalid location change");
@@ -264,32 +334,23 @@
 #pragma mark -
 #pragma mark UITabBarControllerDelegate methods
 
-/*
-// Optional UITabBarControllerDelegate method.
 - (void)tabBarController:(UITabBarController *)tabBarController 
 	didSelectViewController:(UIViewController *)viewController {
+	
+	int index = self.tabBarController.selectedIndex;
+	if (index == 0) {
+		NSLog(@"Selected first view");
+		[self.firstController updateRunDisplay];
+	}
+	
 }
-*/
-
-/*
-// Optional UITabBarControllerDelegate method.
-- (void)tabBarController:(UITabBarController *)tabBarController 
-	didEndCustomizingViewControllers:(NSArray *)viewControllers 
-	changed:(BOOL)changed {
-}
-*/
 
 
 #pragma mark -
 #pragma mark Memory management
 
 - (void)applicationDidReceiveMemoryWarning:(UIApplication *)application {
-    /*
-     Free up as much memory as possible by purging cached data objects 
-	 that can be recreated (or reloaded from disk) later.
-	*/
 }
-
 
 - (void)dealloc {
 	
