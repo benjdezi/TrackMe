@@ -58,7 +58,7 @@
 	
 	// Initialize settings
 	self.isMetric = YES;
-	self.sensitivity = 0.5;
+	self.sensitivity = DEFAULT_SENSITIVITY;
 	
     return YES;
 }
@@ -339,8 +339,17 @@
 	
 	int index = self.tabBarController.selectedIndex;
 	if (index == 0) {
-		NSLog(@"Selected first view");
+		
+		// Main view
 		[self.firstController updateRunDisplay];
+		
+	} else if (index == 1) {
+		
+		// Settings
+		NSLog(@"Initial sensitivity = %f", self.sensitivity);
+		float value = (float) ((self.sensitivity - MIN_DIST_CHANGE) * 1.0 / ((MAX_DIST_CHANGE - MIN_DIST_CHANGE) * 1.0));
+		[self.secondController.sensitivitySlider setValue:value];
+		
 	}
 	
 }
