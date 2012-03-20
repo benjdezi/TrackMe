@@ -25,7 +25,6 @@
 @synthesize currentSpeed;
 @synthesize altitude;
 @synthesize locationPoints;
-@synthesize numPoints;
 @synthesize elapsedTime;
 @synthesize timer;
 
@@ -104,8 +103,12 @@
 	self.totalDistance = 0;
 	self.avgSpeed = 0;
 	self.altitude = 0;
+	
+	if (self.locationPoints != NULL) {
+		// TODO: Save path if enabled
+		[self.locationPoints release];
+	}
 	self.locationPoints = [[NSMutableArray alloc] initWithCapacity:DEFAULT_NUM_POINTS];
-	self.numPoints = 0;
 	
 	// Clear map annotations
 	if (self.firstController.mapView.annotations != NULL) {
@@ -169,18 +172,27 @@
 	region.center = location.coordinate;
 	
 	if (oldLocation != NULL) {
+		// Subsequent points to the start
 		double deltaDist = fabs([location distanceFromLocation:oldLocation]);
-		if (deltaDist > MIN_DIST_CHANGE || self.numPoints == 1) {
-			MKPointAnnotation* annotation = [MKPointAnnotation alloc];
-			annotation.coordinate = oldLocation.coordinate;
-			[self.firstController.mapView addAnnotation:annotation];
+		if (deltaDist > MIN_DIST_CHANGE && [self.locationPoints count] > 1) {
+			[self annotateMap:oldLocation];
 		}
+	} else {
+		// Starting point
+		[self annotateMap:location];
 	}
 	
 	[self.firstController.mapView setRegion:region];
 	self.firstController.mapView.showsUserLocation = YES;
 	NSLog(@"Updated map");
 	
+}
+
+
+- (void)annotateMap:(CLLocation*)location {
+	MKPointAnnotation* annotation = [MKPointAnnotation alloc];
+	annotation.coordinate = location.coordinate;
+	[self.firstController.mapView addAnnotation:annotation];
 }
 
 
@@ -195,7 +207,7 @@
 		
 		NSLog(@"Moved from %@ to %@", oldLocation, newLocation);
 		
-		if (oldLocation == NULL && self.numPoints == 0) {
+		if (oldLocation == NULL) {
 			
 			// Display initial location
 			[self updateMap:NULL newLocation:newLocation];
@@ -221,7 +233,7 @@
 			
 			NSLog(@"Previous distance = %f", self.totalDistance);
 			
-			if (self.totalDistance < 0 || self.numPoints == 0) {
+			if (self.totalDistance < 0) {
 				self.totalDistance = 0;
 			}
 			
@@ -235,7 +247,6 @@
 			
 			// Add new location to path
 			[self.locationPoints addObject:newLocation];
-			self.numPoints++;
 			
 			// Update stats display
 			[self.firstController updateRunDisplay];
@@ -281,8 +292,16 @@
 
 
 - (void)dealloc {
+	
     [tabBarController release];
     [window release];
+	[locationManager release];
+	[timer release];
+	
+	if (locationPoints != NULL) {
+		[locationPoints release];
+	}
+	
     [super dealloc];
 }
 

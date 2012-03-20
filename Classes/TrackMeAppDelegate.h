@@ -37,7 +37,6 @@
 	double avgSpeed;
 	double currentSpeed;
 	double altitude;
-	int numPoints;
 	double elapsedTime;
 	
 }
@@ -47,6 +46,7 @@
 -(void)stop;
 -(void)updateTimer;
 -(void)updateMap:(CLLocation*)oldLocation newLocation:(CLLocation*)location;
+-(void)annotateMap:(CLLocation*)location;
 
 @property (nonatomic, retain) IBOutlet UIWindow* window;
 @property (nonatomic, retain) IBOutlet UITabBarController* tabBarController;
@@ -59,7 +59,6 @@
 @property double avgSpeed;
 @property double currentSpeed;
 @property double altitude;
-@property int numPoints;
 @property double elapsedTime;
 
 @end
