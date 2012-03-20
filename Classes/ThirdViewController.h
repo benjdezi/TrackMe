@@ -11,7 +11,10 @@
 
 @interface ThirdViewController : UIViewController {
 	
+	UILabel* versionLabel;
 	
 }
+
+@property (nonatomic, retain) IBOutlet UILabel* versionLabel;
 
 @end

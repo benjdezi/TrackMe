@@ -53,6 +53,7 @@
 		B5368D4F151746C300C50187 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		B5368D6F15174B4A00C50187 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		B5368D9C15174CC600C50187 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		B5369050151888AE00C50187 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +83,7 @@
 				B5368D471517466200C50187 /* ThirdViewController.m */,
 				B5368D4E151746C300C50187 /* SecondViewController.h */,
 				B5368D4F151746C300C50187 /* SecondViewController.m */,
+				B5369050151888AE00C50187 /* config.h */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
