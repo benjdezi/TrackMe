@@ -9,9 +9,9 @@
 	};
 	1D3623250D0F684500981E51 /* TrackMeAppDelegate.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {558, 5733}}";
-			sepNavSelRange = "{6271, 0}";
-			sepNavVisRange = "{6905, 321}";
+			sepNavIntBoundsRect = "{{0, 0}, {990, 5720}}";
+			sepNavSelRange = "{9271, 0}";
+			sepNavVisRange = "{8723, 1105}";
 			sepNavWindowFrame = "{{84, 150}, {881, 660}}";
 		};
 	};
@@ -40,7 +40,7 @@
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeBuildConfigurationName = Debug;
 		activeExecutable = B5368D131517423500C50187 /* TrackMe */;
-		activeSDKPreference = iphonesimulator4.2;
+		activeSDKPreference = iphoneos4.2;
 		activeTarget = 1D6058900D05DD3D006BFB54 /* TrackMe */;
 		addToTargets = (
 		);
@@ -97,25 +97,55 @@
 					PBXFileDataSource_Target_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 354012965;
-			PBXWorkspaceStateSaveDate = 354012965;
+			PBXPerProjectTemplateStateSaveDate = 354018919;
+			PBXWorkspaceStateSaveDate = 354018919;
 		};
 		perUserProjectItems = {
+			B508D1351519E66E00F62A9C /* PBXTextBookmark */ = B508D1351519E66E00F62A9C /* PBXTextBookmark */;
+			B508D1361519E66E00F62A9C /* PBXTextBookmark */ = B508D1361519E66E00F62A9C /* PBXTextBookmark */;
+			B508D13D1519E6A500F62A9C /* PBXTextBookmark */ = B508D13D1519E6A500F62A9C /* PBXTextBookmark */;
 			B5368F501517DB1B00C50187 /* PBXBookmark */ = B5368F501517DB1B00C50187 /* PBXBookmark */;
 			B5368F9B15186D0D00C50187 /* PlistBookmark */ = B5368F9B15186D0D00C50187 /* PlistBookmark */;
 			B53690A21518914700C50187 /* PBXTextBookmark */ = B53690A21518914700C50187 /* PBXTextBookmark */;
-			B53690A31518914700C50187 /* PBXTextBookmark */ = B53690A31518914700C50187 /* PBXTextBookmark */;
 			B53690A41518914700C50187 /* PBXTextBookmark */ = B53690A41518914700C50187 /* PBXTextBookmark */;
 			B560185B1519DBC00022ED42 /* PBXTextBookmark */ = B560185B1519DBC00022ED42 /* PBXTextBookmark */;
 			B560188E1519E06D0022ED42 /* PBXTextBookmark */ = B560188E1519E06D0022ED42 /* PBXTextBookmark */;
 			B560188F1519E06D0022ED42 /* PBXTextBookmark */ = B560188F1519E06D0022ED42 /* PBXTextBookmark */;
 			B56018901519E06D0022ED42 /* PBXTextBookmark */ = B56018901519E06D0022ED42 /* PBXTextBookmark */;
-			B56018911519E06D0022ED42 /* XCBuildMessageTextBookmark */ = B56018911519E06D0022ED42 /* XCBuildMessageTextBookmark */;
-			B56018A31519E5090022ED42 /* PBXTextBookmark */ = B56018A31519E5090022ED42 /* PBXTextBookmark */;
 		};
 		sourceControlManager = B5368D1C1517424600C50187 /* Source Control */;
 		userBuildSettings = {
 		};
+	};
+	B508D1351519E66E00F62A9C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* TrackMeAppDelegate.m */;
+		name = "TrackMeAppDelegate.m: 342";
+		rLen = 0;
+		rLoc = 9271;
+		rType = 0;
+		vrLen = 1105;
+		vrLoc = 8723;
+	};
+	B508D1361519E66E00F62A9C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = B5369050151888AE00C50187 /* config.h */;
+		name = "config.h: 10";
+		rLen = 0;
+		rLoc = 157;
+		rType = 0;
+		vrLen = 952;
+		vrLoc = 0;
+	};
+	B508D13D1519E6A500F62A9C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = B5369050151888AE00C50187 /* config.h */;
+		name = "config.h: 10";
+		rLen = 0;
+		rLoc = 157;
+		rType = 0;
+		vrLen = 952;
+		vrLoc = 0;
 	};
 	B5368D131517423500C50187 /* TrackMe */ = {
 		isa = PBXExecutable;
@@ -208,7 +238,7 @@
 	};
 	B5369050151888AE00C50187 /* config.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {990, 472}}";
+			sepNavIntBoundsRect = "{{0, 0}, {990, 447}}";
 			sepNavSelRange = "{157, 0}";
 			sepNavVisRange = "{0, 952}";
 		};
@@ -221,16 +251,6 @@
 		rLoc = 567;
 		rType = 0;
 		vrLen = 724;
-		vrLoc = 0;
-	};
-	B53690A31518914700C50187 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = B5369050151888AE00C50187 /* config.h */;
-		name = "config.h: 10";
-		rLen = 0;
-		rLoc = 157;
-		rType = 0;
-		vrLen = 952;
 		vrLoc = 0;
 	};
 	B53690A41518914700C50187 /* PBXTextBookmark */ = {
@@ -255,6 +275,7 @@
 	};
 	B560185C1519DBC00022ED42 /* NSDate.h */ = {
 		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
 		name = NSDate.h;
 		path = /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSDate.h;
 		sourceTree = "<absolute>";
@@ -288,24 +309,5 @@
 		rType = 0;
 		vrLen = 1146;
 		vrLoc = 834;
-	};
-	B56018911519E06D0022ED42 /* XCBuildMessageTextBookmark */ = {
-		isa = PBXTextBookmark;
-		comments = "'region' undeclared (first use in this function)";
-		fRef = 1D3623250D0F684500981E51 /* TrackMeAppDelegate.m */;
-		fallbackIsa = XCBuildMessageTextBookmark;
-		rLen = 0;
-		rLoc = 219;
-		rType = 1;
-	};
-	B56018A31519E5090022ED42 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 1D3623250D0F684500981E51 /* TrackMeAppDelegate.m */;
-		name = "TrackMeAppDelegate.m: 342";
-		rLen = 0;
-		rLoc = 9271;
-		rType = 0;
-		vrLen = 1046;
-		vrLoc = 8782;
 	};
 }
