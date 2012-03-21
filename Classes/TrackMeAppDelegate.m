@@ -256,10 +256,19 @@
 
 
 -(NSString*)formatSpeed:(double)speed {
-	if (self.isMetric == YES) {
+	if (speed < 1.0) {
+		return @"-";
+	}
+	else if (self.isMetric == YES) {
+		
+		// Metric system
 		return [NSString stringWithFormat:@"%.1f km/h", (speed / 1000.0) * 3600.0];
+		
 	} else {
+		
+		// US system
 		return [NSString stringWithFormat:@"%.1f mph", ((speed / 1000.0) / MILE_TO_KM) * 3600.0];
+		
 	}
 }
 
@@ -278,6 +287,8 @@
 		if (oldLocation == NULL || [self.locationPoints count] == 0) {
 			
 			// Display initial location
+			NSLog(@"Rendering initial location");
+			[self.locationPoints addObject:newLocation];
 			[self updateMap:NULL newLocation:newLocation];
 			
 			return;
@@ -289,7 +300,9 @@
 		double accuracy = newLocation.horizontalAccuracy;
 		double alt = newLocation.altitude;
 		
-		NSLog(@"Change in position: %f meters", (int)deltaDist);
+		NSLog(@"Change in position: %f", deltaDist);
+		NSLog(@"Accuracy: %f", accuracy);
+		NSLog(@"Speed: %f", speed);
 		
 		if (accuracy < 0 ||
 			deltaDist < accuracy || 
@@ -297,7 +310,9 @@
 			deltaDist > 10 * self.sensitivity || 
 			speed > MAX_SPEED || 
 			newAvgSpeed > MAX_SPEED) {
+			
 			NSLog(@"Ignoring invalid location change");
+			
 		}
 		else {
 			

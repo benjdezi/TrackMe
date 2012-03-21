@@ -78,22 +78,15 @@
 	NSString* alt = [self.delegate formatDistanceBasic:self.delegate.altitude];
 	
 	// Average speed
-	NSString* avgSpeed = NULL;
-	if (self.delegate.avgSpeed < 1) {
-		avgSpeed = @"-";
-	}
-	else {
-		avgSpeed = [self.delegate formatSpeed:self.delegate.avgSpeed];
-	}
+	NSString* avgSpeed = [self.delegate formatSpeed:self.delegate.avgSpeed];
 	
 	// Current speed
-	NSString* curSpeed = nil;
-	if (self.delegate.currentSpeed < 1) {
-		curSpeed = @"-";
-	}
-	else {
-		curSpeed = [self.delegate formatSpeed:self.delegate.currentSpeed];
-	}
+	NSString* curSpeed = [self.delegate formatSpeed:self.delegate.currentSpeed];
+	
+	NSLog(@"New distance: %@", dist);
+	NSLog(@"New altitude: %@", alt);
+	NSLog(@"New avg. speed: %@", avgSpeed);
+	NSLog(@"New speed: %@", curSpeed);
 	
 	[self.distanceLabel setText:dist];
 	[self.altitudeLabel setText:alt];
