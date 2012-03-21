@@ -31,6 +31,7 @@
 	int elapsedTime;
 	NSDate* startTime;
 	
+	BOOL hasZoomedOnMap;
 	BOOL isMetric;
 	double sensitivity;
 	
@@ -66,6 +67,7 @@
 @property double altitude;
 @property int elapsedTime;
 
+@property BOOL hasZoomedOnMap;
 @property BOOL isMetric;
 @property double sensitivity;
 

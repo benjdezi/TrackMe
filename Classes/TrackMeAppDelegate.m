@@ -30,6 +30,7 @@
 @synthesize timer;
 @synthesize isMetric;
 @synthesize sensitivity;
+@synthesize hasZoomedOnMap;
 
 
 #pragma mark -
@@ -60,6 +61,10 @@
 	// Initialize settings
 	self.isMetric = YES;
 	self.sensitivity = DEFAULT_SENSITIVITY;
+	
+	// Initialize map view
+	self.firstController.mapView.showsUserLocation = YES;
+	self.hasZoomedOnMap = NO;
 	
     return YES;
 }
@@ -175,29 +180,45 @@
 
 -(void)updateMap:(CLLocation*)oldLocation newLocation:(CLLocation*)location {
 	
-	double scalingFactor = ABS(cos(2 * M_PI * location.coordinate.latitude / 360.0));
-	
-	MKCoordinateSpan span;
-	span.latitudeDelta = MAP_RADIUS / 69.0;
-	span.longitudeDelta = MAP_RADIUS / (scalingFactor * 69.0);
-	
 	MKCoordinateRegion region;
-	region.span = span;
-	region.center = location.coordinate;
+	
+	if (self.hasZoomedOnMap == NO) {
+		
+		// Initialize the zoom level
+		double scalingFactor = ABS(cos(2 * M_PI * location.coordinate.latitude / 360.0));
+		MKCoordinateSpan span;
+		span.latitudeDelta = MAP_RADIUS / 69.0;
+		span.longitudeDelta = MAP_RADIUS / (scalingFactor * 69.0);
+		region.span = span;
+		region.center = location.coordinate;
+		
+		self.hasZoomedOnMap = YES;
+		
+	} else {
+		
+		// Update the region but conserve the zoom level
+		region = self.firstController.mapView.region;
+		region.center = location.coordinate;
+		
+	}
+
+	[self.firstController.mapView setRegion:region];
 	
 	if (oldLocation != NULL) {
+		
 		// Subsequent points to the start
 		double deltaDist = fabs([location distanceFromLocation:oldLocation]);
 		if (deltaDist > MIN_DIST_CHANGE && [self.locationPoints count] > 1) {
 			[self annotateMap:oldLocation];
 		}
+		
 	} else {
+		
 		// Starting point
 		[self annotateMap:location];
+		
 	}
 	
-	[self.firstController.mapView setRegion:region];
-	self.firstController.mapView.showsUserLocation = YES;
 	NSLog(@"Updated map");
 	
 }
