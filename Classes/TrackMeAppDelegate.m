@@ -25,6 +25,7 @@
 @synthesize currentSpeed;
 @synthesize altitude;
 @synthesize locationPoints;
+@synthesize startTime;
 @synthesize elapsedTime;
 @synthesize timer;
 @synthesize isMetric;
@@ -106,7 +107,8 @@
 #pragma mark Custom methods
 
 - (void)reset {
-	
+		
+	self.startTime = NULL;
 	self.elapsedTime = 0;
 	self.totalDistance = 0;
 	self.avgSpeed = 0;
@@ -144,17 +146,21 @@
 
 
 -(void)stop {
+	
+	self.elapsedTime = [self getElapsedTimeInMilliseconds];
+	self.startTime = NULL;
+	
 	[self.timer invalidate];
 	[self.locationManager stopUpdatingLocation];
 	NSLog(@"Stopped tracking");
+	
 }
 
 
 -(void)updateTimer {
 	
-	self.elapsedTime += 0.1;
+	int delta_milli = [self getElapsedTimeInMilliseconds];
 	
-	int delta_milli = self.elapsedTime * 1000;
 	int hours = delta_milli / (3600 * 1000);
 	int minutes = (delta_milli - (3600 * 1000) * hours) / (60 * 1000);
 	int seconds = (delta_milli - (3600 * 1000) * hours - (60 * 1000) * minutes) / 1000;
@@ -273,6 +279,21 @@
 }
 
 
+-(int)getElapsedTimeInMilliseconds {
+
+	double delta = 0;
+	if (self.startTime == NULL) {
+		self.startTime = [NSDate date];
+	}
+	else {
+		delta = fabs([self.startTime timeIntervalSinceNow]);
+	}
+	
+	return self.elapsedTime + (int)(delta * 1000);
+	
+}
+
+
 #pragma mark -
 #pragma mark CLLocationManager methods
 
@@ -296,7 +317,7 @@
 		
 		double speed = fabs(newLocation.speed);
 		double deltaDist = fabs([newLocation distanceFromLocation:oldLocation]);
-		double newAvgSpeed = (self.totalDistance + deltaDist) / self.elapsedTime;
+		double newAvgSpeed = (self.totalDistance + deltaDist) / [self getElapsedTimeInMilliseconds];
 		double accuracy = newLocation.horizontalAccuracy;
 		double alt = newLocation.altitude;
 		
@@ -382,6 +403,7 @@
     [window release];
 	[locationManager release];
 	[timer release];
+	[startTime release];
 	
 	if (locationPoints != NULL) {
 		[locationPoints release];

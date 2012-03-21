@@ -27,24 +27,29 @@
 #pragma mark Custom methods
 
 -(void)startOrStop {
+	
 	if (self.started == NO) {
+		
 		// Start new run
 		NSLog(@"Starting or resuming run");
 		self.started = YES;
 		[self setStartButtonTitle:STOP_BUTTON_TEXT];
 		[self.delegate start];
+		
 	}
 	else {
+		
 		// Stop current run
 		NSLog(@"Pausing current run");
 		self.started = NO;
-		if (self.delegate.elapsedTime > 0) {
+		if ([self.delegate getElapsedTimeInMilliseconds] > 0) {
 			[self setStartButtonTitle:RESUME_BUTTON_TEXT];
 		}
 		else {
 			[self setStartButtonTitle:START_BUTTON_TEXT];
 		}
 		[self.delegate stop];
+		
 	}
 }
 

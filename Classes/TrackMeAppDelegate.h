@@ -28,7 +28,8 @@
 	double avgSpeed;
 	double currentSpeed;
 	double altitude;
-	double elapsedTime;
+	int elapsedTime;
+	NSDate* startTime;
 	
 	BOOL isMetric;
 	double sensitivity;
@@ -43,10 +44,12 @@
 -(void)annotateMap:(CLLocation*)location;
 -(double)updateSensitivity;
 -(BOOL)updateUnitSystem;
+
 -(NSString*)_formatDistance:(double)distance isBasic:(BOOL)basic;
 -(NSString*)formatDistanceBasic:(double)distance;
 -(NSString*)formatDistance:(double)distance;
 -(NSString*)formatSpeed:(double)speed;
+-(int)getElapsedTimeInMilliseconds;
 
 @property (nonatomic, retain) IBOutlet UIWindow* window;
 @property (nonatomic, retain) IBOutlet UITabBarController* tabBarController;
@@ -56,11 +59,12 @@
 @property (retain) CLLocationManager* locationManager;
 @property (retain) NSMutableArray* locationPoints;
 @property (retain) NSTimer* timer;
+@property (retain) NSDate* startTime;
 @property double totalDistance;
 @property double avgSpeed;
 @property double currentSpeed;
 @property double altitude;
-@property double elapsedTime;
+@property int elapsedTime;
 
 @property BOOL isMetric;
 @property double sensitivity;
