@@ -7,7 +7,7 @@
  *
  */
 
-#define VERSION				@"0.1.3"		// Version
+#define VERSION				@"0.1.4"		// Version
 
 #define MILE_TO_YARD		1760			// Conversion from miles to yards
 #define YARD_TO_METER		0.9144			// Conversion from yards to meters
