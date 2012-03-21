@@ -336,8 +336,10 @@
 			return;
 		}
 		
+		CLLocation* lastKnownLocation = [self.locationPoints objectAtIndex:[self.locationPoints count] - 1];
+		
 		double speed = fabs(newLocation.speed);
-		double deltaDist = fabs([newLocation distanceFromLocation:oldLocation]);
+		double deltaDist = fabs([newLocation distanceFromLocation:lastKnownLocation]);
 		double newAvgSpeed = (self.totalDistance + deltaDist) / [self getElapsedTimeInMilliseconds];
 		double accuracy = newLocation.horizontalAccuracy;
 		double alt = newLocation.altitude;
@@ -348,8 +350,8 @@
 		
 		if (accuracy < 0 ||
 			deltaDist < accuracy || 
-			deltaDist < self.sensitivity || 
-			deltaDist > 10 * self.sensitivity || 
+			deltaDist > self.sensitivity || 
+			deltaDist < 10 * self.sensitivity || 
 			speed > MAX_SPEED || 
 			newAvgSpeed > MAX_SPEED) {
 			
