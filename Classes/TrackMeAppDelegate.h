@@ -47,6 +47,8 @@
 -(void)annotateMap:(CLLocation*)location;
 -(double)updateSensitivity;
 -(BOOL)updateUnitSystem;
+-(void)saveSettings;
+-(BOOL)loadSettings;
 
 -(NSString*)_formatDistance:(double)distance isBasic:(BOOL)basic;
 -(NSString*)formatDistanceBasic:(double)distance;

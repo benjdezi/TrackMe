@@ -46,6 +46,14 @@
 	self.firstController = (FirstViewController*)[self.tabBarController.viewControllers objectAtIndex:0];
 	self.secondController = (SecondViewController*)[self.tabBarController.viewControllers objectAtIndex:1];
 	
+	// Initialize settings
+	NSLog(@"Initializing settings");
+	if ([self loadSettings] == NO) {
+		self.isMetric = YES;
+		self.sensitivity = DEFAULT_SENSITIVITY;
+		[self saveSettings];
+	}
+	
 	// Initialize stats
 	[self reset];
 	
@@ -57,10 +65,6 @@
 	
 	// Tab Bar
 	self.tabBarController.delegate = self;
-	
-	// Initialize settings
-	self.isMetric = YES;
-	self.sensitivity = DEFAULT_SENSITIVITY;
 	
 	// Initialize map view
 	self.firstController.mapView.showsUserLocation = YES;
@@ -271,18 +275,71 @@
 
 
 -(double)updateSensitivity {
+	
 	double sensitivityRatio = [self.secondController.sensitivitySlider value];
 	int range = MAX_DIST_CHANGE - MIN_DIST_CHANGE;
 	self.sensitivity = MIN_DIST_CHANGE + range * sensitivityRatio;
 	NSLog(@"Changed sensitivity to %f", self.sensitivity);
+	
+	[self saveSettings];
+	
 	return self.sensitivity;
 }
 
 
 -(BOOL)updateUnitSystem {
+	
 	self.isMetric = [self.secondController.metricSwitch isOn];
 	NSLog(@"Is metric = %d", self.isMetric);
+	
+	[self saveSettings];
+	
 	return self.isMetric;
+}
+
+
+-(void)saveSettings {
+	
+	NSString* data = [NSString stringWithFormat:@"%f%@%d", self.sensitivity, SETTINGS_SEP, self.isMetric];
+	NSLog(@"settings data = %@", data);
+	if ([data writeToFile:SETTINGS_FILE atomically:NO encoding:NSASCIIStringEncoding error:NULL] == YES) {
+		NSLog(@"Saved new settings");
+	}
+	else {
+		NSLog(@"Could not saved settings");
+	}
+}
+
+
+-(BOOL)loadSettings {
+
+	BOOL didLoad = NO;
+	
+	NSString* data = [[NSString alloc] initWithContentsOfFile:SETTINGS_FILE encoding:NSASCIIStringEncoding error:nil];
+	NSArray* parts = [data componentsSeparatedByString:SETTINGS_SEP];
+	NSLog(@"settings data = %@", parts);
+	if ([parts count] == 2) {
+		
+		// Parse settings values
+		self.sensitivity = [[parts objectAtIndex:0] doubleValue];
+		self.isMetric = [[parts objectAtIndex:1] boolValue];
+		NSLog(@"Loaded settings");
+		
+		// Update settings display
+		[self.secondController.sensitivityLabel setText:[self formatDistance:self.sensitivity]];
+		[self.secondController.metricSwitch setOn:self.isMetric];
+		
+		didLoad = YES;
+		
+	} else {
+		
+		// No saved settings available
+		NSLog(@"No saved settings found");
+		
+	}
+	[data release];
+	
+	return didLoad;
 }
 
 

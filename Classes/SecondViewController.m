@@ -38,8 +38,6 @@
 - (void)viewDidLoad {
 	
 	self.delegate = (TrackMeAppDelegate*)[[UIApplication sharedApplication] delegate];
-	[self.delegate updateSensitivity];
-	[self.delegate updateUnitSystem];
 	
     [super viewDidLoad];
 }

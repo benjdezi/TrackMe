@@ -55,12 +55,13 @@
 
 
 -(void)reset {
+	NSString* noDistance = [self.delegate formatDistance:0];
 	NSLog(@"Resetting current run");
 	[self.delegate stop];
 	[self.delegate reset];
 	[self.runTimeLabel setText:DEFAULT_TIMER_TEXT];
-	[self.distanceLabel setText:@"0 m"];
-	[self.altitudeLabel setText:@"0 m"];
+	[self.distanceLabel setText:noDistance];
+	[self.altitudeLabel setText:noDistance];
 	[self.avgSpeedLabel setText:@"-"];
 	[self.curSpeedLabel setText:@"-"];
 	[self setStartButtonTitle:START_BUTTON_TEXT];
