@@ -37,7 +37,7 @@
 #pragma mark Application lifecycle
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
-    
+	
     // Add the tab bar controller's view to the window and display.
     [self.window addSubview:tabBarController.view];
     [self.window makeKeyAndVisible];
@@ -45,14 +45,6 @@
 	// Store controller references
 	self.firstController = (FirstViewController*)[self.tabBarController.viewControllers objectAtIndex:0];
 	self.secondController = (SecondViewController*)[self.tabBarController.viewControllers objectAtIndex:1];
-	
-	// Initialize settings
-	NSLog(@"Initializing settings");
-	if ([self loadSettings] == NO) {
-		self.isMetric = YES;
-		self.sensitivity = DEFAULT_SENSITIVITY;
-		[self saveSettings];
-	}
 	
 	// Initialize stats
 	[self reset];

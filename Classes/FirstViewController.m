@@ -111,6 +111,14 @@
 	
 	self.delegate = (TrackMeAppDelegate*)[[UIApplication sharedApplication] delegate];
 	
+	// Initialize settings
+	NSLog(@"Initializing settings");
+	if ([self.delegate loadSettings] == NO) {
+		self.delegate.isMetric = YES;
+		self.delegate.sensitivity = DEFAULT_SENSITIVITY;
+		[self.delegate saveSettings];
+	}
+	
 	[self reset];
 	
 }
