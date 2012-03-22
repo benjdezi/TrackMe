@@ -140,12 +140,14 @@
 
 
 -(void)start {
+#if !TARGET_IPHONE_SIMULATOR
 	[self.locationManager startUpdatingLocation];
+#endif
 	self.timer = [NSTimer scheduledTimerWithTimeInterval:TIMER_PERIOD 
 												  target:self 
 												selector:@selector(updateTimer) 
 												userInfo:nil 
-												 repeats:YES];
+											 repeats:YES];
 	NSLog(@"Started tracking");
 }
 
@@ -175,6 +177,43 @@
 	
 	[self.firstController.runTimeLabel setText:timeString];
 	
+#if TARGET_IPHONE_SIMULATOR
+	
+	// Simulate location change every 2 seconds
+	if (seconds % 2 == 0 && ms == 0) {
+		
+		BOOL isFirst = ([self.locationPoints count] == 0);
+		
+		NSLog(@"Simulating location change");
+		
+		CLLocation* oldLocation = NULL;
+		if (isFirst == NO) {
+			oldLocation = [[self locationPoints] objectAtIndex:[self.locationPoints count] - 1];
+		}
+		
+		CLLocationCoordinate2D newCoords;
+		CLLocation* newLocation = [CLLocation alloc];
+		if (isFirst == YES) {
+			newCoords.latitude = 37.0;
+			newCoords.longitude = 122.0;
+		} else {
+			CLLocationCoordinate2D oldCoords = oldLocation.coordinate;
+			newCoords.latitude = oldCoords.latitude + [self generateRamdonChange];
+			newCoords.longitude = oldCoords.longitude + [self generateRamdonChange];
+		}
+		[newLocation initWithCoordinate:newCoords altitude:10 horizontalAccuracy:10 verticalAccuracy:10 timestamp:[NSDate date]];
+		
+		[self processLocationChange:newLocation fromLocation:oldLocation];
+	
+	}
+	
+#endif
+	
+}
+
+
+-(double)generateRamdonChange {
+	return (double) ((rand() / (double)RAND_MAX) / 300.0);
 }
 
 
@@ -267,7 +306,7 @@
 			return [NSString stringWithFormat:@"%d m", (int)distance];
 		} else {
 			// Kilometers
-			return [NSString stringWithFormat:@".2f km", distance / 1000.0];
+			return [NSString stringWithFormat:@"%.2f km", distance / 1000.0];
 		}
 	} else {
 		if (distance < (MILE_TO_YARD * 0.25) || basic == YES) {
@@ -321,7 +360,14 @@
 - (void)locationManager:(CLLocationManager*)manager
 	didUpdateToLocation:(CLLocation*)newLocation 
 		   fromLocation:(CLLocation*)oldLocation {
+		
+	[self processLocationChange:newLocation fromLocation:oldLocation];
 	
+}
+
+
+-(void)processLocationChange:(CLLocation*)newLocation fromLocation:oldLocation {
+
 	if (newLocation != oldLocation) {
 		
 		NSLog(@"Moved from %@ to %@", oldLocation, newLocation);
@@ -340,18 +386,19 @@
 		
 		double speed = fabs(newLocation.speed);
 		double deltaDist = fabs([newLocation distanceFromLocation:lastKnownLocation]);
-		double newAvgSpeed = (self.totalDistance + deltaDist) / [self getElapsedTimeInMilliseconds];
+		double newAvgSpeed = (self.totalDistance + deltaDist) / ((double)[self getElapsedTimeInMilliseconds] / 1000.0);
 		double accuracy = newLocation.horizontalAccuracy;
 		double alt = newLocation.altitude;
 		
 		NSLog(@"Change in position: %f", deltaDist);
 		NSLog(@"Accuracy: %f", accuracy);
 		NSLog(@"Speed: %f", speed);
+		NSLog(@"Avg speed: %f", newAvgSpeed);
 		
 		if (accuracy < 0 ||
 			deltaDist < accuracy || 
-			deltaDist > self.sensitivity || 
-			deltaDist < 10 * self.sensitivity || 
+			deltaDist < self.sensitivity || 
+			deltaDist > 10 * self.sensitivity || 
 			speed > MAX_SPEED || 
 			newAvgSpeed > MAX_SPEED) {
 			
