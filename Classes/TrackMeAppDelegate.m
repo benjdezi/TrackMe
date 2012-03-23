@@ -122,12 +122,23 @@
 	}
 	self.locationPoints = [[NSMutableArray alloc] initWithCapacity:DEFAULT_NUM_POINTS];
 	
+	MKMapView* map = self.firstController.mapView;
+	
 	// Clear map annotations
-	if (self.firstController.mapView.annotations != NULL) {
-		for (id annotation in self.firstController.mapView.annotations) {		
+	if (map.annotations != NULL) {
+		for (id annotation in map.annotations) {		
 			if (![annotation isKindOfClass:[MKUserLocation class]]){
-				[self.firstController.mapView removeAnnotation:annotation];
+				[map removeAnnotation:annotation];
 			}
+		}
+	}
+	
+	// Hide map overlays
+	if (map.overlays != NULL) {
+		for (id overlay in map.overlays) {
+			MKOverlayView* overlayView = [map viewForOverlay:overlay];
+			overlayView.hidden = YES;
+			[overlayView setNeedsDisplay];
 		}
 	}
 	
