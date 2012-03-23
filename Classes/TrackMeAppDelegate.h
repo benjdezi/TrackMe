@@ -42,6 +42,7 @@
 -(void)stop;
 -(void)updateTimer;
 -(void)updateMap:(CLLocation*)oldLocation newLocation:(CLLocation*)location;
+-(void)drawLineForLocations:(CLLocation*)location fromLocation:(CLLocation*)oldLocation;
 -(void)processLocationChange:(CLLocation*)newLocation fromLocation:oldLocation;
 -(double)generateRamdonChange;
 -(void)annotateMap:(CLLocation*)location;

@@ -12,7 +12,7 @@
 #define MILE_TO_YARD		1760				// Conversion from miles to yards
 #define YARD_TO_METER		0.9144				// Conversion from yards to meters
 #define MILE_TO_KM			1.609344			// Conversion from miles to kilometers
-#define MAP_RADIUS			0.5					// Default map span
+#define MAP_RADIUS			0.65				// Default map span
 #define MIN_DIST_CHANGE		50					// Minimum change in position required to be relevant
 #define MAX_DIST_CHANGE		1000				// Maximum change in position required to be relevant
 #define MAX_SPEED			120					// Maximim speed

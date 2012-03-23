@@ -54,6 +54,7 @@
 	self.locationManager.delegate = self;
 	self.locationManager.distanceFilter = MIN_DIST_CHANGE;
 	self.locationManager.desiredAccuracy = DEFAULT_PRECISION;
+	self.locationManager.distanceFilter = self.sensitivity > 0 ? self.sensitivity : DEFAULT_PRECISION;
 	
 	// Tab Bar
 	self.tabBarController.delegate = self;
@@ -137,7 +138,7 @@
 
 -(void)start {
 #if !TARGET_IPHONE_SIMULATOR
-	[self.locationManager startUpdatingLocation];
+	[self.locationManager startMonitoringSignificantLocationChanges];
 #endif
 	self.timer = [NSTimer scheduledTimerWithTimeInterval:TIMER_PERIOD 
 												  target:self 
@@ -217,11 +218,12 @@
 	
 	MKCoordinateRegion region;
 	
+	MKCoordinateSpan span;
+	double scalingFactor = ABS(cos(2 * M_PI * location.coordinate.latitude / 360.0));
+	
 	if (self.hasZoomedOnMap == NO) {
 		
 		// Initialize the zoom level
-		double scalingFactor = ABS(cos(2 * M_PI * location.coordinate.latitude / 360.0));
-		MKCoordinateSpan span;
 		span.latitudeDelta = MAP_RADIUS / 69.0;
 		span.longitudeDelta = MAP_RADIUS / (scalingFactor * 69.0);
 		region.span = span;
@@ -230,7 +232,7 @@
 		self.hasZoomedOnMap = YES;
 		
 	} else {
-		
+				
 		// Update the region but conserve the zoom level
 		region = self.firstController.mapView.region;
 		region.center = location.coordinate;
@@ -239,13 +241,16 @@
 
 	[self.firstController.mapView setRegion:region];
 	
-	if (oldLocation != NULL) {
+	if (oldLocation != location) {
 		
 		// Subsequent points to the start
 		double deltaDist = fabs([location distanceFromLocation:oldLocation]);
 		if (deltaDist > MIN_DIST_CHANGE && [self.locationPoints count] > 1) {
-			[self annotateMap:oldLocation];
+			[self annotateMap:location];
 		}
+	
+		// Draw a line between the old and new locations
+		[self drawLineForLocations:location fromLocation:oldLocation];
 		
 	} else {
 		
@@ -255,6 +260,20 @@
 	}
 	
 	NSLog(@"Updated map");
+	
+}
+
+
+-(void)drawLineForLocations:(CLLocation*)location fromLocation:(CLLocation*)oldLocation {
+
+	MKMapPoint* points = malloc(sizeof(CLLocationCoordinate2D) * 2);
+	points[0] = MKMapPointForCoordinate(oldLocation.coordinate);
+	points[1] = MKMapPointForCoordinate(location.coordinate);
+	
+	MKPolyline* line = [[MKPolyline polylineWithPoints:points count:2] autorelease];
+	
+	[self.firstController.mapView addOverlay:line];
+	free(points);
 	
 }
 
@@ -274,6 +293,8 @@
 	NSLog(@"Changed sensitivity to %f", self.sensitivity);
 	
 	[self saveSettings];
+	self.locationManager.distanceFilter = self.sensitivity;
+	
 	
 	return self.sensitivity;
 }
@@ -420,18 +441,14 @@
 	if (newLocation != oldLocation) {
 		
 		NSLog(@"Moved from %@ to %@", oldLocation, newLocation);
-		
-		if (oldLocation == NULL || [self.locationPoints count] == 0) {
-			
-			// Display initial location
-			NSLog(@"Rendering initial location");
-			[self.locationPoints addObject:newLocation];
-			[self updateMap:NULL newLocation:newLocation];
-			
-			return;
+				
+		CLLocation* lastKnownLocation = NULL;
+		if ([self.locationPoints count] > 0) {
+			lastKnownLocation = [self.locationPoints objectAtIndex:[self.locationPoints count] - 1];
 		}
-		
-		CLLocation* lastKnownLocation = [self.locationPoints objectAtIndex:[self.locationPoints count] - 1];
+		else {
+			lastKnownLocation = newLocation;
+		}
 		
 		double speed = fabs(newLocation.speed);
 		double deltaDist = fabs([newLocation distanceFromLocation:lastKnownLocation]);
@@ -444,12 +461,13 @@
 		NSLog(@"Speed: %f", speed);
 		NSLog(@"Avg speed: %f", newAvgSpeed);
 		
-		if (accuracy < 0 ||
+		if (oldLocation != NULL &&
+			(accuracy < 0 ||
 			deltaDist < accuracy || 
 			deltaDist < self.sensitivity || 
 			deltaDist > 10 * self.sensitivity || 
 			speed > MAX_SPEED || 
-			newAvgSpeed > MAX_SPEED) {
+			newAvgSpeed > MAX_SPEED)) {
 			
 			NSLog(@"Ignoring invalid location change");
 			
@@ -477,11 +495,26 @@
 			[self.firstController updateRunDisplay];
 			
 			// Update map view
-			[self updateMap:oldLocation newLocation:newLocation];
+			[self updateMap:lastKnownLocation newLocation:newLocation];
 			
 		}
 		
 	}
+	
+}
+
+
+#pragma mark -
+#pragma mark MKMapViewDelegate methods
+
+- (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id)overlay {
+	
+	MKPolylineView* overlayView = [[[MKPolylineView alloc] initWithPolyline:(MKPolyline*)overlay] autorelease];
+	overlayView.fillColor = [UIColor brownColor];
+	overlayView.strokeColor = [UIColor brownColor];
+	overlayView.lineWidth = 2;
+	
+	return overlayView;
 	
 }
 
