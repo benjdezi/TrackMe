@@ -169,6 +169,13 @@
 	
 	[self.timer invalidate];
 	[self.locationManager stopUpdatingLocation];
+	
+	// Add breakpoint
+	if ([self.locationPoints count] > 1) {
+		CLLocation* lastLocation = [self.locationPoints objectAtIndex:[self.locationPoints count]-1];
+		[self annotateMap:lastLocation];
+	}
+	
 	NSLog(@"Stopped tracking");
 	
 }
