@@ -39,6 +39,9 @@
 	
 	self.delegate = (TrackMeAppDelegate*)[[UIApplication sharedApplication] delegate];
 	
+	[self.sensitivityLabel setText:[self.delegate formatDistance:self.delegate.sensitivity]];
+	[self.metricSwitch setOn:self.delegate.isMetric];
+	
     [super viewDidLoad];
 }
 

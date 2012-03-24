@@ -31,6 +31,8 @@
 @synthesize isMetric;
 @synthesize sensitivity;
 @synthesize hasZoomedOnMap;
+@synthesize bottomLeft;
+@synthesize topRight;
 
 
 #pragma mark -
@@ -243,23 +245,34 @@
 		self.hasZoomedOnMap = YES;
 		
 	} else {
-				
+		
 		// Update the region but conserve the zoom level
 		region = self.firstController.mapView.region;
 		region.center = location.coordinate;
+		
+		// Check if the extremities of the path are outside the current region
+		if (self.bottomLeft.latitude < region.center.latitude + region.span.latitudeDelta ||
+			self.bottomLeft.longitude < region.center.longitude - region.span.longitudeDelta ||
+			self.topRight.latitude > region.center.latitude - region.span.latitudeDelta ||
+			self.topRight.longitude > region.center.longitude + region.span.longitudeDelta) {
+			
+			NSLog(@"Resizing visible region");
+			
+			double lat_span = self.topRight.latitude - self.bottomLeft.latitude;
+			double lng_span = self.topRight.longitude - self.bottomLeft.longitude;
+			region.center.latitude = self.bottomLeft.latitude + lat_span / 2;
+			region.center.longitude = self.bottomLeft.longitude + lng_span / 2;
+			region.span.latitudeDelta = lat_span * 1.25;
+			region.span.longitudeDelta = lng_span * 1.25;
+			
+		}
 		
 	}
 
 	[self.firstController.mapView setRegion:region];
 	
 	if (oldLocation != location) {
-		
-		// Subsequent points to the start
-		double deltaDist = fabs([location distanceFromLocation:oldLocation]);
-		if (deltaDist > MIN_DIST_CHANGE && [self.locationPoints count] > 1) {
-			[self annotateMap:location];
-		}
-	
+			
 		// Draw a line between the old and new locations
 		[self drawLineForLocations:location fromLocation:oldLocation];
 		
@@ -459,6 +472,19 @@
 		}
 		else {
 			lastKnownLocation = newLocation;
+			self.bottomLeft = newLocation.coordinate;
+			self.topRight = newLocation.coordinate;
+		}
+		
+		// Check for new boundaries
+		CLLocationCoordinate2D coords = newLocation.coordinate;
+		if (coords.latitude < bottomLeft.latitude || coords.longitude < bottomLeft.longitude) {
+			self.bottomLeft = coords;
+			NSLog(@"Changed bottom left corner");
+		}
+		if (coords.latitude > topRight.latitude || coords.longitude > topRight.longitude) {
+			self.topRight = coords;
+			NSLog(@"Changed top right corner");
 		}
 		
 		double speed = fabs(newLocation.speed);

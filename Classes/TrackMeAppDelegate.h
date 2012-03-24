@@ -21,6 +21,9 @@
 	SecondViewController* secondController;
 	
 	CLLocationManager* locationManager;
+	CLLocationCoordinate2D bottomLeft;
+	CLLocationCoordinate2D topRight;
+	
 	NSTimer* timer;
 	
 	NSMutableArray* locationPoints;
@@ -63,6 +66,9 @@
 @property (nonatomic, retain) SecondViewController* secondController;
 
 @property (retain) CLLocationManager* locationManager;
+@property CLLocationCoordinate2D bottomLeft;
+@property CLLocationCoordinate2D topRight;
+
 @property (retain) NSMutableArray* locationPoints;
 @property (retain) NSTimer* timer;
 @property (retain) NSDate* startTime;
